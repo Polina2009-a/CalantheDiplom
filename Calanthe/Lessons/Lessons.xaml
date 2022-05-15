@@ -1,0 +1,98 @@
+﻿<Window Style="{StaticResource win}"
+        x:Class="Calanthe.Lessons"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calanthe"
+        mc:Ignorable="d"
+        Title="Авторизация" WindowStartupLocation="CenterScreen" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="147*"/>
+            <ColumnDefinition Width="916*"/>
+            <ColumnDefinition Width="147*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="94*"/>
+            <RowDefinition Height="432*"/>
+            <RowDefinition Height="94*"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" Grid.Column="2" Source="/Resources/Logo.ico" Margin="0,0,6,0" />
+        <Button Style="{StaticResource Base}" x:Name="Back_b" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Margin="16,28,16,27" Content="Назад" Click="Back_b_Click"></Button>
+        <Button Visibility="Hidden" Style="{StaticResource Base}" x:Name="Back_b2" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Margin="16,28,16,27" Content="Назад" Click="Back_b2_Click"></Button>
+        <Button Visibility="Hidden" Style="{StaticResource Base}" x:Name="Back_b3" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Margin="16,28,16,27" Content="Назад" Click="Back_b3_Click"></Button>
+
+
+        <ScrollViewer Visibility="Visible" x:Name="PanelLessons" Grid.Column="1" Grid.Row="1">
+            <WrapPanel>
+                <Button x:Name="Alphabet" Style="{StaticResource Less}" Click="ViewLesson" Content="Alfabeto"/>
+                <Button x:Name="Nouns" Style="{StaticResource Less}" Click="ViewLesson" Content="Sustantivos"/>
+                <Button x:Name="Adjectives" Style="{StaticResource Less}" Click="ViewLesson" Content="Adjetivos"/>
+                <Button x:Name="Pronouns" Style="{StaticResource Less}" Click="ViewLesson" Content="Pronombres"/>
+                <Button x:Name="Verbs1" Style="{StaticResource Less}" Click="ViewLesson" Content="Verbos 1"/>
+                <Button x:Name="Verbs2" Style="{StaticResource Less}" Click="ViewLesson" Content="Verbos 2"/>
+                <Button x:Name="Accusative" Style="{StaticResource Less}" Click="ViewLesson" Content="Acusativo"/>
+                <Button x:Name="Dative" Style="{StaticResource Less}" Click="ViewLesson" Content="Dativo"/>
+                <Button x:Name="Genitive" Style="{StaticResource Less}" Click="ViewLesson" Content="Genitivo"/>
+                <Button x:Name="Ablative" Style="{StaticResource Less}" Click="ViewLesson" Content="Instrumental"/>
+                <Button x:Name="Prepositional" Style="{StaticResource Less}" Click="ViewLesson" Content="Prepositivo"/>
+                <Button x:Name="Past" Style="{StaticResource Less}" Click="ViewLesson" Content="Pasado"/>
+                <Button x:Name="Future" Style="{StaticResource Less}" Click="ViewLesson" Content="Futuro"/>
+                <Button x:Name="Particles" Style="{StaticResource Less}" Click="ViewLesson" Content="Partículas"/>
+                <Button x:Name="Questions" Style="{StaticResource Less}" Click="ViewLesson" Content="Preguntas"/>
+                <Button x:Name="Prepositions" Style="{StaticResource Less}" Click="ViewLesson" Content="Preposiciones"/>
+            </WrapPanel>
+        </ScrollViewer>
+
+        <WrapPanel Visibility="Hidden" x:Name="PanelMenu" Grid.Column="1" Grid.Row="1" Margin="180,0,180,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button  x:Name="Teoria_b" Grid.Column="1" Grid.Row="2" Content="Теория" Margin="0,0,0,20" Click="Teoria_b_Click" />
+            <Button  x:Name="Practic_b" Grid.Column="1" Grid.Row="2" Content="Практика" Margin="0,0,0,20" Click="Practic_b_Click" />
+        </WrapPanel>
+        <Button Visibility="Hidden" x:Name="Dictionary_b" Grid.Column="2" Grid.Row="2" Content="Словарь" Margin="-212,10,57,24" Width="Auto" Click="Dictionary_b_Click"/>
+
+        <Grid x:Name="PeacticAlphabet"  Visibility="Hidden" Grid.Column="1" Margin="10,0,0,0" Grid.Row="1" >
+            <ScrollViewer >
+                <ListView Width="894" Background="#FF1C223A">
+                    <Expander Style="{StaticResource ex}" Header="¿Cuántas letras hay en el alfabeto ruso?">
+                        <TextBox x:Name="PeacticAlphabet1" Style="{StaticResource textbox}" Width="280" ></TextBox>
+                </Expander>
+                    <Expander Style="{StaticResource ex}" Header="Encuentra la traducción del pronombre: Yo">
+                        <TextBox x:Name="PeacticAlphabet2" Style="{StaticResource textbox}"  Width="280"></TextBox>
+                </Expander>
+                    <Expander Style="{StaticResource ex}" Header="Cómo se escribe el número: Одна тысяча один?">
+                        <TextBox x:Name="PeacticAlphabet3"  Style="{StaticResource textbox}" Width="280"></TextBox>
+                </Expander>
+                    <Expander Style="{StaticResource ex}" Header="¿Cuántas vocales hay en el alfabeto ruso?">
+                        <TextBox x:Name="PeacticAlphabet4" Style="{StaticResource textbox}" Width="280"></TextBox>
+                </Expander>
+                    <Expander Style="{StaticResource ex}" Header="Escribe la traducción del pronombre: Ella" >
+                        <TextBox x:Name="PeacticAlphabet5" Style="{StaticResource textbox}"  Width="280"></TextBox>
+                    </Expander>
+                    <Button x:Name="SavePeacticAlphabet" Content="Listo" Click="SavePeacticAlphabet_Click"></Button>
+            </ListView>
+        </ScrollViewer>
+        </Grid>
+
+        <ScrollViewer  x:Name="PeacticNouns"  Visibility="Hidden" Grid.Column="1" Margin="10,0,0,0" Grid.Row="1" >
+            <ListView Background="#FF9A54AE" Width="894">
+                <Expander Style="{StaticResource ex}" Header="sdvdsxv sdzv s?">
+                    <TextBox Width="280"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="sdvdsxv sdzv s?">
+                    <TextBox Width="280"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="sdvdsxv sdzv s?">
+                    <TextBox Width="280"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="sdvdsxv sdzv s?">
+                    <TextBox Width="280"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="sdvdsxv sdzv s?">
+                    <TextBox Width="280"></TextBox>
+                </Expander>
+                <Button Content="Сохранить"></Button>
+            </ListView>
+        </ScrollViewer>
+    </Grid>
+</Window>

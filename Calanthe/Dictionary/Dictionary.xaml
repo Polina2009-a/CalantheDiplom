@@ -1,0 +1,67 @@
+﻿<Window Style="{StaticResource win}"
+        x:Class="Calanthe.Dictionary"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calanthe"
+        mc:Ignorable="d"
+        Title="Словарь" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" >
+    <Grid RenderTransformOrigin="0.048,0.142">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="147*"/>
+            <ColumnDefinition Width="916*"/>
+            <ColumnDefinition Width="147*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="94*"/>
+            <RowDefinition Height="429*"/>
+            <RowDefinition Height="98*"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" Grid.Column="2" Source="/Resources/Logo.ico" Margin="0,0,6,0" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" />
+        <Button Style="{StaticResource Base}" x:Name="Back_b" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Content="Назад" Margin="16,28,16,27" Click="Back_b_Click" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin"></Button>
+
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="113*"/>
+            </Grid.RowDefinitions>
+
+            <WrapPanel Grid.Row="0" HorizontalAlignment="Right">
+                <Canvas Width="58">
+                    <Canvas.Background>
+                        <ImageBrush ImageSource="Research.png" Stretch="Uniform"/>
+                    </Canvas.Background>
+                </Canvas>
+                <TextBox x:Name="tbResearch" Width="267" Foreground="#FF0A0808" TextChanged="tbResearch_TextChanged"></TextBox>
+            </WrapPanel>
+
+            <DataGrid  Style="{StaticResource data_grid}" x:Name="dbWords" Grid.Row="1">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Слово" Binding="{Binding Word}" Width="*"/>
+                    <DataGridTextColumn Header="Перевод" Binding="{Binding Translation}" Width="*"/>
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Style="{StaticResource Research}" x:Name="edit_b" Content="Редактировать" Click="edit_b_Click_1"></Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Style="{StaticResource Research}" x:Name="del_b" Content="Удалить" Click="del_b_Click"></Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+        <WrapPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="Back_lessons" Content="Занятия" Click="Back_lessons_Click"/>
+            <Button x:Name="Add_b" Content="Добавить" Click="Add_b_Click"/>
+        </WrapPanel>
+    </Grid>
+</Window>
+

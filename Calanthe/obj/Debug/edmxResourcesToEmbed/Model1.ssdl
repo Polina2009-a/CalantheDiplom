@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище CalantheModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Answers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumberLesson" Type="int" Nullable="false" />
+    <Property Name="NumberQuestion" Type="int" Nullable="false" />
+    <Property Name="Answer" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PracticalLesson">
+    <Key>
+      <PropertyRef Name="Number" />
+    </Key>
+    <Property Name="Number" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Statistics">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="NumberLesson" Type="int" Nullable="false" />
+    <Property Name="StatusTeoria" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="StatusPractic" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="Email" />
+    </Key>
+    <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Login" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Image" Type="varbinary(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TheoreticalLesson">
+    <Key>
+      <PropertyRef Name="Number" />
+    </Key>
+    <Property Name="Number" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="FileLesson" Type="varbinary(max)" />
+    <Property Name="filename" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Vocabulary">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Word" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Translation" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Answers_PracticalLesson">
+    <End Role="PracticalLesson" Type="Self.PracticalLesson" Multiplicity="1" />
+    <End Role="Answers" Type="Self.Answers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PracticalLesson">
+        <PropertyRef Name="Number" />
+      </Principal>
+      <Dependent Role="Answers">
+        <PropertyRef Name="NumberLesson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Statistics_PracticalLesson">
+    <End Role="PracticalLesson" Type="Self.PracticalLesson" Multiplicity="1" />
+    <End Role="Statistics" Type="Self.Statistics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PracticalLesson">
+        <PropertyRef Name="Number" />
+      </Principal>
+      <Dependent Role="Statistics">
+        <PropertyRef Name="NumberLesson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Statistics_Student">
+    <End Role="Student" Type="Self.Student" Multiplicity="1" />
+    <End Role="Statistics" Type="Self.Statistics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="Email" />
+      </Principal>
+      <Dependent Role="Statistics">
+        <PropertyRef Name="Email" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Statistics_TheoreticalLesson">
+    <End Role="TheoreticalLesson" Type="Self.TheoreticalLesson" Multiplicity="1" />
+    <End Role="Statistics" Type="Self.Statistics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TheoreticalLesson">
+        <PropertyRef Name="Number" />
+      </Principal>
+      <Dependent Role="Statistics">
+        <PropertyRef Name="NumberLesson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vocabulary_Student">
+    <End Role="Student" Type="Self.Student" Multiplicity="1" />
+    <End Role="Vocabulary" Type="Self.Vocabulary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="Email" />
+      </Principal>
+      <Dependent Role="Vocabulary">
+        <PropertyRef Name="Email" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище CalantheModelContainer">
+    <EntitySet Name="Answers" EntityType="Self.Answers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PracticalLesson" EntityType="Self.PracticalLesson" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Statistics" EntityType="Self.Statistics" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TheoreticalLesson" EntityType="Self.TheoreticalLesson" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vocabulary" EntityType="Self.Vocabulary" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Answers_PracticalLesson" Association="Self.FK_Answers_PracticalLesson">
+      <End Role="PracticalLesson" EntitySet="PracticalLesson" />
+      <End Role="Answers" EntitySet="Answers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Statistics_PracticalLesson" Association="Self.FK_Statistics_PracticalLesson">
+      <End Role="PracticalLesson" EntitySet="PracticalLesson" />
+      <End Role="Statistics" EntitySet="Statistics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Statistics_Student" Association="Self.FK_Statistics_Student">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="Statistics" EntitySet="Statistics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Statistics_TheoreticalLesson" Association="Self.FK_Statistics_TheoreticalLesson">
+      <End Role="TheoreticalLesson" EntitySet="TheoreticalLesson" />
+      <End Role="Statistics" EntitySet="Statistics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vocabulary_Student" Association="Self.FK_Vocabulary_Student">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="Vocabulary" EntitySet="Vocabulary" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

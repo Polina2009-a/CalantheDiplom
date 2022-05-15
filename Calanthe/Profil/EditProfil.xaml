@@ -1,0 +1,103 @@
+﻿<Window Style="{StaticResource win}"
+        x:Class="Calanthe.EditProfil"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calanthe"
+        mc:Ignorable="d"
+        Title="Редактирование профиля" WindowStartupLocation="CenterScreen" >
+    <Grid RenderTransformOrigin="0.048,0.142">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="147*"/>
+            <ColumnDefinition Width="916*"/>
+            <ColumnDefinition Width="147*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="94*"/>
+            <RowDefinition Height="433*"/>
+            <RowDefinition Height="94*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="1" Grid.RowSpan="2" Margin="84,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="234*"/>
+                <RowDefinition Height="36*"/>
+                <RowDefinition Height="22*"/>
+                <RowDefinition Height="33*"/>
+                <RowDefinition Height="42*"/>
+                <RowDefinition Height="38*"/>
+                <RowDefinition Height="42*"/>
+                <RowDefinition Height="38*"/>
+                <RowDefinition Height="42*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="1" Margin="170,0" Grid.RowSpan="8" d:LayoutOverrides="VerticalAlignment, LeftMargin, RightMargin">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="65*"/>
+                    <ColumnDefinition Width="266*"/>
+                    <ColumnDefinition Width="65"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="45*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="35*"/>
+                    <RowDefinition Height="48*"/>
+                    <RowDefinition Height="31*"/>
+                    <RowDefinition Height="34*"/>
+                    <RowDefinition Height="48*"/>
+                    <RowDefinition Height="38*"/>
+                </Grid.RowDefinitions>
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFAF5FC4"/>
+                        <GradientStop Color="#FF422449" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <Label Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Width="60">Логин</Label>
+                <TextBox x:Name="Login" Grid.Row="1" Grid.Column="1" BorderBrush="{x:Null}">
+                    <TextBox.Background>
+                        <ImageBrush ImageSource="/Resources/Line.png"/>
+                    </TextBox.Background>
+                </TextBox>
+                <Label Grid.Row="3" Grid.Column="1">Электронная почта</Label>
+                <TextBox x:Name="Mail" Grid.Row="4" Grid.Column="1" BorderBrush="{x:Null}" IsReadOnly ="True">
+                    <TextBox.Background>
+                        <ImageBrush ImageSource="/Resources/Line.png"/>
+                    </TextBox.Background>
+                </TextBox>
+                <Label Grid.Row="6" Grid.Column="1">Пароль</Label>
+                <TextBox x:Name="Password" Grid.Row="7" Grid.Column="1" BorderBrush="{x:Null}">
+                    <TextBox.Background>
+                        <ImageBrush ImageSource="/Resources/Line.png"/>
+                    </TextBox.Background>
+                </TextBox>
+            </Grid>
+
+            <!--<Button Style="{StaticResource Research}" Grid.Row="0" Content="Редактировать" HorizontalAlignment="Right" Margin="0,0,170,29" Width="164" Height="38" VerticalAlignment="Bottom" FontWeight="Bold" Click="Button_Click" Panel.ZIndex="2"></Button>-->
+
+            <Menu Style="{StaticResource menu}" Height="24" VerticalAlignment="Bottom" Margin="0,0,224,58" HorizontalAlignment="Right" Width="133" Panel.ZIndex="3">
+                <MenuItem Style="{StaticResource menuitem}" Header="Редактировать" Height="24" Width="133" >
+                    <MenuItem.Icon>
+                        <Image Source="C:\Users\Полина\Desktop\Calanthe\Calanthe\Profil\Pencil.png"/>
+                    </MenuItem.Icon>
+                    <MenuItem x:Name="NewFoto"  Style="{StaticResource menuitem}" Header="Загрузить" Click="NewFoto_Click"/>
+                    <MenuItem x:Name="Del"  Style="{StaticResource menuitem}" Header="Удалить" Click="Del_Click"/>
+                </MenuItem>
+
+            </Menu>
+
+
+            <Ellipse x:Name="imageEllipse" Grid.Row="0" Margin="268,44,268,29"></Ellipse>
+        </Grid>
+
+        <Image Grid.Row="0" Grid.Column="2" Source="/Resources/Logo.ico" Margin="0,0,6,0" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" />
+
+        <Button Style="{StaticResource Base}" x:Name="Back_b" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Margin="16,28,16,27" Content="Назад" Click="Back_b_Click"></Button>
+
+        <WrapPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <Button  x:Name="Save_b" Content="Сохранить" Margin="0,0,40,0" Click="Save_b_Click" />
+            <Button  x:Name="GoOut_b" Content="Выйти" Click="GoOut_b_Click" />
+        </WrapPanel>
+    </Grid>
+</Window>

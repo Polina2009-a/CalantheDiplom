@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CalantheModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Answers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NumberLesson" Type="Int32" Nullable="false" />
+    <Property Name="NumberQuestion" Type="Int32" Nullable="false" />
+    <Property Name="Answer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="PracticalLesson" Relationship="Self.FK_Answers_PracticalLesson" FromRole="Answers" ToRole="PracticalLesson" />
+  </EntityType>
+  <EntityType Name="PracticalLesson">
+    <Key>
+      <PropertyRef Name="Number" />
+    </Key>
+    <Property Name="Number" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Answers" Relationship="Self.FK_Answers_PracticalLesson" FromRole="PracticalLesson" ToRole="Answers" />
+    <NavigationProperty Name="Statistics" Relationship="Self.FK_Statistics_PracticalLesson" FromRole="PracticalLesson" ToRole="Statistics" />
+  </EntityType>
+  <EntityType Name="Statistics">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NumberLesson" Type="Int32" Nullable="false" />
+    <Property Name="StatusTeoria" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="StatusPractic" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="PracticalLesson" Relationship="Self.FK_Statistics_PracticalLesson" FromRole="Statistics" ToRole="PracticalLesson" />
+    <NavigationProperty Name="Student" Relationship="Self.FK_Statistics_Student" FromRole="Statistics" ToRole="Student" />
+    <NavigationProperty Name="TheoreticalLesson" Relationship="Self.FK_Statistics_TheoreticalLesson" FromRole="Statistics" ToRole="TheoreticalLesson" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="Email" />
+    </Key>
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Login" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <NavigationProperty Name="Statistics" Relationship="Self.FK_Statistics_Student" FromRole="Student" ToRole="Statistics" />
+    <NavigationProperty Name="Vocabulary" Relationship="Self.FK_Vocabulary_Student" FromRole="Student" ToRole="Vocabulary" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TheoreticalLesson">
+    <Key>
+      <PropertyRef Name="Number" />
+    </Key>
+    <Property Name="Number" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FileLesson" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="filename" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Statistics" Relationship="Self.FK_Statistics_TheoreticalLesson" FromRole="TheoreticalLesson" ToRole="Statistics" />
+  </EntityType>
+  <EntityType Name="Vocabulary">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Word" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Translation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Student" Relationship="Self.FK_Vocabulary_Student" FromRole="Vocabulary" ToRole="Student" />
+  </EntityType>
+  <Association Name="FK_Answers_PracticalLesson">
+    <End Role="PracticalLesson" Type="Self.PracticalLesson" Multiplicity="1" />
+    <End Role="Answers" Type="Self.Answers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PracticalLesson">
+        <PropertyRef Name="Number" />
+      </Principal>
+      <Dependent Role="Answers">
+        <PropertyRef Name="NumberLesson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Statistics_PracticalLesson">
+    <End Role="PracticalLesson" Type="Self.PracticalLesson" Multiplicity="1" />
+    <End Role="Statistics" Type="Self.Statistics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PracticalLesson">
+        <PropertyRef Name="Number" />
+      </Principal>
+      <Dependent Role="Statistics">
+        <PropertyRef Name="NumberLesson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Statistics_Student">
+    <End Role="Student" Type="Self.Student" Multiplicity="1" />
+    <End Role="Statistics" Type="Self.Statistics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="Email" />
+      </Principal>
+      <Dependent Role="Statistics">
+        <PropertyRef Name="Email" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Statistics_TheoreticalLesson">
+    <End Role="TheoreticalLesson" Type="Self.TheoreticalLesson" Multiplicity="1" />
+    <End Role="Statistics" Type="Self.Statistics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TheoreticalLesson">
+        <PropertyRef Name="Number" />
+      </Principal>
+      <Dependent Role="Statistics">
+        <PropertyRef Name="NumberLesson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vocabulary_Student">
+    <End Role="Student" Type="Self.Student" Multiplicity="1" />
+    <End Role="Vocabulary" Type="Self.Vocabulary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="Email" />
+      </Principal>
+      <Dependent Role="Vocabulary">
+        <PropertyRef Name="Email" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CalantheEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Answers" EntityType="Self.Answers" />
+    <EntitySet Name="PracticalLesson" EntityType="Self.PracticalLesson" />
+    <EntitySet Name="Statistics" EntityType="Self.Statistics" />
+    <EntitySet Name="Student" EntityType="Self.Student" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="TheoreticalLesson" EntityType="Self.TheoreticalLesson" />
+    <EntitySet Name="Vocabulary" EntityType="Self.Vocabulary" />
+    <AssociationSet Name="FK_Answers_PracticalLesson" Association="Self.FK_Answers_PracticalLesson">
+      <End Role="PracticalLesson" EntitySet="PracticalLesson" />
+      <End Role="Answers" EntitySet="Answers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Statistics_PracticalLesson" Association="Self.FK_Statistics_PracticalLesson">
+      <End Role="PracticalLesson" EntitySet="PracticalLesson" />
+      <End Role="Statistics" EntitySet="Statistics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Statistics_Student" Association="Self.FK_Statistics_Student">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="Statistics" EntitySet="Statistics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Statistics_TheoreticalLesson" Association="Self.FK_Statistics_TheoreticalLesson">
+      <End Role="TheoreticalLesson" EntitySet="TheoreticalLesson" />
+      <End Role="Statistics" EntitySet="Statistics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vocabulary_Student" Association="Self.FK_Vocabulary_Student">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="Vocabulary" EntitySet="Vocabulary" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

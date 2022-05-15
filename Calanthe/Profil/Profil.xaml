@@ -1,0 +1,74 @@
+﻿<Window Style="{StaticResource win}"
+        x:Class="Calanthe.Profil"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calanthe"
+        mc:Ignorable="d"
+        Title="Профиль" WindowStartupLocation="CenterScreen" >
+    <Grid RenderTransformOrigin="0.048,0.142">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="147*"/>
+            <ColumnDefinition Width="916*"/>
+            <ColumnDefinition Width="147*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="94*"/>
+            <RowDefinition Height="433*"/>
+            <RowDefinition Height="94*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="1" Grid.RowSpan="2" Margin="84,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="236*"/>
+                <RowDefinition Height="35*"/>
+                <RowDefinition Height="40*"/>
+                <RowDefinition Height="35*"/>
+                <RowDefinition Height="40*"/>
+                <RowDefinition Height="35*"/>
+                <RowDefinition Height="40*"/>
+                <RowDefinition Height="35*"/>
+                <RowDefinition Height="40*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="1">1nivel</Label>
+            <Label Grid.Row="3">2nivel</Label>
+            <Label Grid.Row="5">3nivel</Label>
+            <Label Grid.Row="7">4nivel</Label>
+            <WrapPanel Grid.Row="2">
+                <Rectangle Style="{StaticResource Res_1}"></Rectangle>
+                <Rectangle Style="{StaticResource Res_1}"></Rectangle>
+                <Rectangle Style="{StaticResource Res_1}"></Rectangle>
+                <Rectangle Style="{StaticResource Res_1}"></Rectangle>
+            </WrapPanel>
+            <WrapPanel Grid.Row="4">
+                <Rectangle Style="{StaticResource Res_2}"></Rectangle>
+                <Rectangle Style="{StaticResource Res_2}"></Rectangle>
+                <Rectangle Style="{StaticResource Res_2}"></Rectangle>
+                <Rectangle Style="{StaticResource Res_2}"></Rectangle>
+            </WrapPanel>
+            <WrapPanel Grid.Row="6">
+                <Rectangle Style="{StaticResource Res_3}"></Rectangle>
+                <Rectangle Style="{StaticResource Res_3}"></Rectangle>
+                <Rectangle Style="{StaticResource Res_3}"></Rectangle>
+                <Rectangle Style="{StaticResource Res_3}"></Rectangle>
+            </WrapPanel>
+            <WrapPanel Grid.Row="8">
+                <Rectangle Style="{StaticResource Res_4}"></Rectangle>
+                <Rectangle Style="{StaticResource Res_4}"></Rectangle>
+                <Rectangle Style="{StaticResource Res_4}"></Rectangle>
+                <Rectangle Style="{StaticResource Res_4}"></Rectangle>
+            </WrapPanel>
+
+            <Ellipse x:Name="imageEllipse" Grid.Row="0" Margin="273,46,271,35"></Ellipse>
+            <Image x:Name="imagetest" HorizontalAlignment="Left" Width="245" Margin="0,46,0,0"></Image>
+        </Grid>
+
+        <Image Grid.Row="0" Grid.Column="2" Source="/Resources/Logo.ico" Margin="0,0,6,0" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" />
+
+        <Button Style="{StaticResource Base}" x:Name="Back_b" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Content="Назад" Margin="16,28,16,27" Click="Back_b_Click"></Button>
+
+        <WrapPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" >
+            <Button  x:Name="Continue_b" Content="Настройки"  Margin="0,20,0,0" Click="Continue_b_Click"/>
+        </WrapPanel>
+    </Grid>
+</Window>

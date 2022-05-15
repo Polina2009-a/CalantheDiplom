@@ -1,0 +1,70 @@
+﻿<Window Style="{StaticResource win}"
+        x:Class="Calanthe.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calanthe"
+        mc:Ignorable="d"
+        Title="Регистрация" WindowStartupLocation="CenterScreen" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="147*"/>
+            <ColumnDefinition Width="916*"/>
+            <ColumnDefinition Width="147*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="94*"/>
+            <RowDefinition Height="433*"/>
+            <RowDefinition Height="94*"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" Grid.Column="2" Source="/Resources/Logo.ico" Margin="0,0,6,0" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" />
+        <Grid Grid.Column="1" Grid.Row="1" Margin="210,30,210,34" d:LayoutOverrides="LeftMargin, RightMargin">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="79*"/>
+                <ColumnDefinition Width="325*"/>
+                <ColumnDefinition Width="80*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="36*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="40*"/>
+                <RowDefinition Height="36*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="40*"/>
+                <RowDefinition Height="36*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="40*"/>
+            </Grid.RowDefinitions>
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF9751A2"/>
+                    <GradientStop Color="#FF3C2540" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Label Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Bottom">Логин</Label>
+            <TextBox x:Name="Login" Grid.Row="1" Grid.Column="1" BorderBrush="{x:Null}">
+                <TextBox.Background>
+                    <ImageBrush ImageSource="/Resources/Line.png"/>
+                </TextBox.Background>
+            </TextBox>
+            <Label Grid.Row="3" Grid.Column="1" VerticalAlignment="Bottom">Электронная почта</Label>
+            <TextBox x:Name="Mail" Grid.Row="4" Grid.Column="1" BorderBrush="{x:Null}">
+                <TextBox.Background>
+                    <ImageBrush ImageSource="/Resources/Line.png"/>
+                </TextBox.Background>
+            </TextBox>
+            <Label Grid.Row="6" Grid.Column="1" VerticalAlignment="Bottom">Пароль</Label>
+            <TextBox x:Name="Password" Grid.Row="7" Grid.Column="1" BorderBrush="{x:Null}">
+                <TextBox.Background>
+                    <ImageBrush ImageSource="/Resources/Line.png"/>
+                </TextBox.Background>
+            </TextBox>
+        </Grid>
+        <Button Style="{StaticResource Base}" x:Name="Back_b" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Margin="16,28,16,27" Content="Назад" Click="Back_b_Click" >
+        </Button>
+        <WrapPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" >
+            <Button x:Name="Continue_b" Content="Продолжить" Click="Continue_b_Click"/>
+        </WrapPanel>
+    </Grid>
+</Window>

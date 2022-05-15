@@ -1,0 +1,35 @@
+﻿<Window Style="{StaticResource win}"
+        x:Class="Calanthe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calanthe"
+        mc:Ignorable="d"
+        Title="Главное окно" WindowStartupLocation="CenterScreen" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="147*"/>
+            <ColumnDefinition Width="916*"/>
+            <ColumnDefinition Width="147*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="94*"/>
+            <RowDefinition Height="432*"/>
+            <RowDefinition Height="94*"/>
+        </Grid.RowDefinitions>
+
+        <Image Grid.Row="0" Grid.Column="2" Source="/Resources/Logo.ico" Margin="0,0,6,0" />
+
+        <TextBlock TextAlignment="Center" TextWrapping="Wrap" Grid.Column="1" Grid.Row="1" Foreground="White" FontSize="24" Background="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Center">
+           <Run> Hola, amigos!</Run>
+            <LineBreak/>
+           <Run> Bienvenidos a la aplicación Calanthe. Fue creado para que puedas aprender los conceptos básicos del idioma ruso. Si tienes dudas o encuentras errores, escríbeme en</Run> 
+            <Hyperlink Click="Hyperlink_Click" Foreground="#FFDB53FF" FontWeight="Bold"> TELEGRAM </Hyperlink>
+           <Run> y no olvides adjuntar una captura de pantalla.</Run>
+           <LineBreak/>
+           <Run>Gracias! </Run>
+        </TextBlock>
+        <Button x:Name="Continue_b" Grid.Column="1" Grid.Row="2" Content="Listo" Click="Continue_b_Click"/>
+    </Grid>
+</Window>

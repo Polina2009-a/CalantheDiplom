@@ -13,7 +13,7 @@
     <Key>
       <PropertyRef Name="Number" />
     </Key>
-    <Property Name="Number" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Number" Type="int" Nullable="false" />
     <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
   </EntityType>
   <EntityType Name="Statistics">
@@ -49,10 +49,9 @@
     <Key>
       <PropertyRef Name="Number" />
     </Key>
-    <Property Name="Number" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Number" Type="int" Nullable="false" />
     <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="FileLesson" Type="varbinary(max)" />
-    <Property Name="filename" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="Vocabulary">
     <Key>

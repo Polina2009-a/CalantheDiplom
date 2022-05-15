@@ -16,12 +16,13 @@ namespace Calanthe
     public partial class CalantheEntities : DbContext
     {
         private static CalantheEntities _context;
-      
+
         public CalantheEntities()
             : base("name=CalantheEntities")
         {
         }
 
+       
         public static CalantheEntities GetContext()
         {
             if (_context == null)
@@ -31,7 +32,6 @@ namespace Calanthe
 
             return _context;
         }
-
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

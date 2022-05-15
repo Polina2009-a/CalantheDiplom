@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="3630b35a21014e4487b361bed09bc43d" Name="Diagram1">
+      <Diagram DiagramId="dc5be77a048f4251a9d57dd222c43828" Name="Diagram1">
         <EntityTypeShape EntityType="CalantheModel.Answers" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="CalantheModel.PracticalLesson" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
         <EntityTypeShape EntityType="CalantheModel.Statistics" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />

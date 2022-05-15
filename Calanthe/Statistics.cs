@@ -14,10 +14,9 @@ namespace Calanthe
     
     public partial class Statistics
     {
-
         public Statistics()
         {
-           
+            
         }
 
         public Statistics(string mail, int number, string statusTeoria, string statusPractic)

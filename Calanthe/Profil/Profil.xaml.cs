@@ -26,14 +26,14 @@ namespace Calanthe
         string mail;
         Student user = new Student();
         CalantheEntities db = new CalantheEntities();
+        Statistics statistics = new Statistics();
         string filename = null;
+        int count = 0;
 
         public Profil(string mail)
         {
             InitializeComponent();
-            this.mail = mail;
-
-            
+            this.mail = mail;     
             foreach (var user in db.Student)
             {
                 if (mail == user.Email)
@@ -41,6 +41,62 @@ namespace Calanthe
                     imageEllipse.Fill = new ImageBrush(LoadImage(user.Image));
                     break;
                 }
+            }
+
+            var stat = db.Statistics.Where(p => p.Email == mail && p.StatusPractic == "Пройдено" && p.StatusTeoria == "Пройдено");                    
+            foreach(Statistics p in stat)
+            {
+                for (int i = 0; i < 16; i++) 
+                    { 
+                        count += 1;
+                        break;
+                    }                      
+            }
+
+            switch (count)
+            {
+                case 1:
+                    rcg1.Fill = Brushes.Blue;
+                    break;
+                case 2:
+                    rcg1.Fill = Brushes.Blue;
+                    rcg2.Fill = Brushes.Blue;
+                    break;
+                case 3:
+                    rcg1.Fill = Brushes.Blue;
+                    rcg2.Fill = Brushes.Blue;
+                    rcg3.Fill = Brushes.Blue;
+                    break;
+                case 4:
+                    rcg1.Fill = Brushes.Blue;
+                    rcg2.Fill = Brushes.Blue;
+                    rcg3.Fill = Brushes.Blue;
+                    rcg4.Fill = Brushes.Blue;
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                case 7:
+                    break;
+                case 8:
+                    break;
+                case 9:
+                    break;
+                case 10:
+                    break;
+                case 11:
+                    break;
+                case 12:
+                    break;
+                case 13:
+                    break;
+                case 14:
+                    break;
+                case 15:
+                    break;
+                case 16:
+                    break;
             }
         }
 

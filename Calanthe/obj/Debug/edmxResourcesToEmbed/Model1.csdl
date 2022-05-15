@@ -14,7 +14,7 @@
     <Key>
       <PropertyRef Name="Number" />
     </Key>
-    <Property Name="Number" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Number" Type="Int32" Nullable="false" />
     <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Answers" Relationship="Self.FK_Answers_PracticalLesson" FromRole="PracticalLesson" ToRole="Answers" />
     <NavigationProperty Name="Statistics" Relationship="Self.FK_Statistics_PracticalLesson" FromRole="PracticalLesson" ToRole="Statistics" />
@@ -57,10 +57,9 @@
     <Key>
       <PropertyRef Name="Number" />
     </Key>
-    <Property Name="Number" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Number" Type="Int32" Nullable="false" />
     <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="FileLesson" Type="Binary" MaxLength="Max" FixedLength="false" />
-    <Property Name="filename" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Statistics" Relationship="Self.FK_Statistics_TheoreticalLesson" FromRole="TheoreticalLesson" ToRole="Statistics" />
   </EntityType>
   <EntityType Name="Vocabulary">

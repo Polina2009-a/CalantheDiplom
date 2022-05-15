@@ -35,28 +35,28 @@
             <Label Grid.Row="5">3nivel</Label>
             <Label Grid.Row="7">4nivel</Label>
             <WrapPanel Grid.Row="2">
-                <Rectangle Style="{StaticResource Res_1}"></Rectangle>
-                <Rectangle Style="{StaticResource Res_1}"></Rectangle>
-                <Rectangle Style="{StaticResource Res_1}"></Rectangle>
-                <Rectangle Style="{StaticResource Res_1}"></Rectangle>
+                <Rectangle x:Name="rcg1" Style="{DynamicResource Res_1}"></Rectangle>
+                <Rectangle x:Name="rcg2" Style="{DynamicResource Res_1}"></Rectangle>
+                <Rectangle x:Name="rcg3" Style="{DynamicResource Res_1}"></Rectangle>
+                <Rectangle x:Name="rcg4" Style="{DynamicResource Res_1}"></Rectangle>
             </WrapPanel>
             <WrapPanel Grid.Row="4">
-                <Rectangle Style="{StaticResource Res_2}"></Rectangle>
-                <Rectangle Style="{StaticResource Res_2}"></Rectangle>
-                <Rectangle Style="{StaticResource Res_2}"></Rectangle>
-                <Rectangle Style="{StaticResource Res_2}"></Rectangle>
+                <Rectangle Style="{DynamicResource Res_2}"></Rectangle>
+                <Rectangle Style="{DynamicResource Res_2}"></Rectangle>
+                <Rectangle Style="{DynamicResource Res_2}"></Rectangle>
+                <Rectangle Style="{DynamicResource Res_2}"></Rectangle>
             </WrapPanel>
             <WrapPanel Grid.Row="6">
-                <Rectangle Style="{StaticResource Res_3}"></Rectangle>
-                <Rectangle Style="{StaticResource Res_3}"></Rectangle>
-                <Rectangle Style="{StaticResource Res_3}"></Rectangle>
-                <Rectangle Style="{StaticResource Res_3}"></Rectangle>
+                <Rectangle Style="{DynamicResource Res_3}"></Rectangle>
+                <Rectangle Style="{DynamicResource Res_3}"></Rectangle>
+                <Rectangle Style="{DynamicResource Res_3}"></Rectangle>
+                <Rectangle Style="{DynamicResource Res_3}"></Rectangle>
             </WrapPanel>
             <WrapPanel Grid.Row="8">
-                <Rectangle Style="{StaticResource Res_4}"></Rectangle>
-                <Rectangle Style="{StaticResource Res_4}"></Rectangle>
-                <Rectangle Style="{StaticResource Res_4}"></Rectangle>
-                <Rectangle Style="{StaticResource Res_4}"></Rectangle>
+                <Rectangle Style="{DynamicResource Res_4}"></Rectangle>
+                <Rectangle Style="{DynamicResource Res_4}"></Rectangle>
+                <Rectangle Style="{DynamicResource Res_4}"></Rectangle>
+                <Rectangle Style="{DynamicResource Res_4}"></Rectangle>
             </WrapPanel>
 
             <Ellipse x:Name="imageEllipse" Grid.Row="0" Margin="273,46,271,35"></Ellipse>

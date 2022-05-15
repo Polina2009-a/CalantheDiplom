@@ -28,8 +28,10 @@ namespace Calanthe
         CalantheEntities db = new CalantheEntities();
         TheoreticalLesson theoreticalLesson = new TheoreticalLesson();
         Statistics statistics = new Statistics();
+        Answers answers = new Answers();
         string filename = null;
         string msg;
+        string Answer;
 
         public Lessons(string mail)
         {
@@ -95,6 +97,7 @@ namespace Calanthe
                     {
                         theoreticalLesson = item;
 
+                        MessageBox.Show("Пожалуйста, выберите папку для сохранения файла!");
                         using (var dialog = new System.Windows.Forms.FolderBrowserDialog())
                         {
                             System.Windows.Forms.DialogResult result = dialog.ShowDialog();
@@ -131,7 +134,7 @@ namespace Calanthe
             Dictionary_b.Visibility = Visibility.Hidden;
             PanelMenu.Visibility = Visibility.Hidden;
             MessageBox.Show("Пожалуйста, пишите все ответы с маленькой буквы!");
-
+            
             switch (msg)
             {
                 case "Alphabet":
@@ -151,6 +154,8 @@ namespace Calanthe
             {
                 if (PeacticAlphabet1.Text == "33" && PeacticAlphabet2.Text == "я" && PeacticAlphabet3.Text == "1001" && PeacticAlphabet4.Text == "6" && PeacticAlphabet5.Text == "она")
                 {
+                    string answer = PeacticAlphabet1.Text + PeacticAlphabet2.Text + PeacticAlphabet3.Text + PeacticAlphabet4.Text + PeacticAlphabet5.Text;
+                    MessageBox.Show(answer);
                     MessageBox.Show("Тест пройден!");
                     ChangeStatusPractic();
                 }

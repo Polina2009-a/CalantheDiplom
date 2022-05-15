@@ -55,32 +55,6 @@ namespace Calanthe
         private void ViewLesson(object sender, RoutedEventArgs e)
         {
             msg = ((Button)sender).Name;
-            //int n = 0;
-            //int number = 0;
-            //foreach (var item in db.TheoreticalLesson)
-            //{
-            //    if (msg == item.Title)
-            //    {
-            //        theoreticalLesson = item;
-            //        number = theoreticalLesson.Number;
-
-            //        foreach (var i in db.Statistics)
-            //        {
-            //            if(theoreticalLesson.Number == i.NumberLesson)
-            //            {
-            //                statistics = i;
-            //                n = 1;-+
-            //                break;
-            //            }
-            //        }       
-            //    }
-            //}
-
-            //(n == 1)
-            //{
-                
-            //} 
-
             PanelMenu.Visibility = Visibility.Visible;
             Dictionary_b.Visibility = Visibility.Visible;
             Dictionary_b.Visibility = Visibility.Visible;
@@ -112,7 +86,7 @@ namespace Calanthe
         private void Teoria_b_Click(object sender, RoutedEventArgs e)
         {
             int n = 0;
-
+            Statistics statistics = new Statistics();
             try
             {
                 foreach (var item in db.TheoreticalLesson)
@@ -120,14 +94,27 @@ namespace Calanthe
                     if (msg == item.Title)
                     {
                         theoreticalLesson = item;
-                        MessageBox.Show("Имя:" + msg);
-                        filename = theoreticalLesson.filename;
+
+                        using (var dialog = new System.Windows.Forms.FolderBrowserDialog())
+                        {
+                            System.Windows.Forms.DialogResult result = dialog.ShowDialog();
+                            filename = dialog.SelectedPath + @"\" + msg + ".pdf";
+                        }
+
                         File.WriteAllBytes(filename, theoreticalLesson.FileLesson);
                         var process = Process.Start(filename);
-                        break;
 
+                        foreach (var i in db.Statistics)
+                        {
+                            if (item.Number == i.NumberLesson && i.Email == mail)
+                            {
+                                i.StatusTeoria = "Пройдено";
+                                break;
+                            }
+                        }
                     }
                 }
+                db.SaveChanges();
             }
 
             catch (Exception)
@@ -165,17 +152,69 @@ namespace Calanthe
                 if (PeacticAlphabet1.Text == "33" && PeacticAlphabet2.Text == "я" && PeacticAlphabet3.Text == "1001" && PeacticAlphabet4.Text == "6" && PeacticAlphabet5.Text == "она")
                 {
                     MessageBox.Show("Тест пройден!");
+                    ChangeStatusPractic();
                 }
                 else
                 {
                     MessageBox.Show("Тест не пройден!");
-                    PeacticAlphabet1.Text = null;
-                    PeacticAlphabet2.Text = null;
-                    PeacticAlphabet3.Text = null;
-                    PeacticAlphabet4.Text = null;
-                    PeacticAlphabet5.Text = null; 
+                    PeacticAlphabet1.Text = string.Empty;
+                    PeacticAlphabet2.Text = string.Empty;
+                    PeacticAlphabet3.Text = string.Empty;
+                    PeacticAlphabet4.Text = string.Empty;
+                    PeacticAlphabet5.Text = string.Empty;
                 }
             }
         }
+
+        void ChangeStatusPractic()
+        {
+            Statistics statistics = new Statistics();
+                foreach (var item in db.TheoreticalLesson)
+                {
+                    if (msg == item.Title)
+                    {
+                        foreach (var i in db.Statistics)
+                        {
+                            if (item.Number == i.NumberLesson && i.Email == mail)
+                            {
+                                i.StatusPractic = "Пройдено";
+                                break;
+                            }
+                        }
+                    }
+                }
+           db.SaveChanges();
+        }
     }
 }
+
+
+
+
+
+
+//int n = 0;
+//int number = 0;
+//foreach (var item in db.TheoreticalLesson)
+//{
+//    if (msg == item.Title)
+//    {
+//        theoreticalLesson = item;
+//        number = theoreticalLesson.Number;
+
+//        foreach (var i in db.Statistics)
+//        {
+//            if(theoreticalLesson.Number == i.NumberLesson)
+//            {
+//                statistics = i;
+//                n = 1;-+
+//                break;
+//            }
+//        }       
+//    }
+//}
+
+//(n == 1)
+//{
+
+//} 

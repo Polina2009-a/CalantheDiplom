@@ -59,7 +59,7 @@ namespace Calanthe
                 }
             }
             _context.SaveChanges();
-            MessageBox.Show("Сохранено!");
+            MessageBox.Show("Guardado!");
             Dictionary _win = new Dictionary(mail);
             _win.Show();
             this.Close();

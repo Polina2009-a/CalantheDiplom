@@ -43,7 +43,7 @@ namespace Calanthe
         {
             Vocabulary _vocabulary = new Vocabulary();
 
-            if (Word.Text == "" || Translite.Text == "") MessageBox.Show("Введите данные!");
+            if (Word.Text == "" || Translite.Text == "") MessageBox.Show("Introduzca los datos!");
             else
             {
 
@@ -57,7 +57,7 @@ namespace Calanthe
                 Dictionary _win = new Dictionary(mail);
                 _win.Show();
                 this.Close();
-                MessageBox.Show("Сохранено!");
+                MessageBox.Show("Guardado!");
             }
 
         }

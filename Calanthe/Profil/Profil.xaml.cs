@@ -47,10 +47,10 @@ namespace Calanthe
             foreach(Statistics p in stat)
             {
                 for (int i = 0; i < 16; i++) 
-                    { 
+                { 
                         count += 1;
                         break;
-                    }                      
+                }                      
             }
 
             switch (count)

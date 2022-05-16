@@ -52,7 +52,7 @@ namespace Calanthe
         {
             int n = 0;
 
-            if (Mail.Text == "" || Password.Password.ToString() == "") MessageBox.Show("Введите данные!");
+            if (Mail.Text == "" || Password.Password.ToString() == "") MessageBox.Show("Introduzca los datos!");
 
             else
             {
@@ -69,9 +69,9 @@ namespace Calanthe
                     Menu _win = new Menu(Mail.Text);
                     this.Close();
                     _win.Show();
-                    MessageBox.Show("Добро пожаловать!");
+                    MessageBox.Show("Bienvenido!");
                 }
-                else MessageBox.Show("Такого пользователя не существует!");
+                else MessageBox.Show("Este usuario no existe!");
             }
         }
 
@@ -80,7 +80,7 @@ namespace Calanthe
             try
             {
                 int n = 0;
-                if (Mail.Text == "") MessageBox.Show("Введите почту, а потом нажмите сюда ещё раз!");
+                if (Mail.Text == "") MessageBox.Show("Ingrese su correo electrónico y luego haga clic aquí de nuevo!");
                 else
                 {
                     foreach (var user in db.Student)
@@ -109,24 +109,24 @@ namespace Calanthe
                         MailAddress from = new MailAddress("Polina_alekseevna_valova@mail.ru", "Calanthe - Ruso Idioma");
                         MailAddress to = new MailAddress(Mail.Text);
                         MailMessage m = new MailMessage(from, to);
-                        m.Subject = "Восстановление пароля";
-                        m.Body = "Ваш новый пароль:" + finalString;
+                        m.Subject = "Recuperación de contraseña";
+                        m.Body = "Su nueva contraseña:" + finalString;
                         m.IsBodyHtml = true;
                         SmtpClient smtp = new SmtpClient("smtp.mail.ru", 25);
                         smtp.Credentials = new NetworkCredential("Polina_alekseevna_valova@mail.ru", "D3vTLNZE6CBLNB4dKAEG");
                         smtp.EnableSsl = true;
                         smtp.Send(m);
-                        MessageBox.Show("Пароль отправлен на Вашу почту! После его получения авторизуйтесь с помощью него!");
+                        MessageBox.Show("Contraseña enviada a Su correo electrónico! Después de recibirlo, inicie sesión con él!");
 
                         _user.Password = finalString;
                         db.SaveChanges();
                     }
-                    else MessageBox.Show("Пользователя с такой электронной почтой не существует!");
+                    else MessageBox.Show("El usuario con dicho correo electrónico no existe!");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Нет подключения к интернету или такой почты не существует!");
+                MessageBox.Show("No hay conexión a Internet o este correo electrónico no existe!");
             }
         }  
     }

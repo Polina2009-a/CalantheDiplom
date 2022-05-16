@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calanthe"
         mc:Ignorable="d"
-        Title="Меню" WindowStartupLocation="CenterScreen" >
+        Title="Menú" WindowStartupLocation="CenterScreen" >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="147*"/>
@@ -21,10 +21,10 @@
 
         <Image Grid.Row="0" Grid.Column="2" Source="/Resources/Logo.ico" Margin="0,0,6,0" />
         <WrapPanel Grid.Column="1" Grid.Row="1" Margin="180,0,180,0" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button  x:Name="Profile_b" Grid.Column="1" Grid.Row="2" Content="Профиль" Margin="0,0,0,20" Click="Profile_b_Click"/>
-            <Button  x:Name="Lessons_b" Grid.Column="1" Grid.Row="2" Content="Занятия" Margin="0,0,0,20" Click="Lessons_b_Click"/>
-            <Button  x:Name="Dictionary_b" Grid.Column="1" Grid.Row="2" Content="Словарь" Margin="0,0,0,0" Click="Dictionary_b_Click"/>
+            <Button  x:Name="Profile_b" Grid.Column="1" Grid.Row="2" Content="Perfil" Margin="0,0,0,20" Click="Profile_b_Click"/>
+            <Button  x:Name="Lessons_b" Grid.Column="1" Grid.Row="2" Content="Lección" Margin="0,0,0,20" Click="Lessons_b_Click"/>
+            <Button  x:Name="Dictionary_b" Grid.Column="1" Grid.Row="2" Content="Diccionario" Margin="0,0,0,0" Click="Dictionary_b_Click"/>
         </WrapPanel>
-        <Button Style="{StaticResource Base}" x:Name="Back_b" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Margin="16,28,16,27" Content="Назад" Click="Back_b_Click"></Button>
+        <Button Style="{StaticResource Base}" x:Name="Back_b" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Margin="16,28,16,27" Content="Atrás" Click="Back_b_Click"></Button>
     </Grid>
 </Window>

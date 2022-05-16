@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calanthe"
         mc:Ignorable="d"
-        Title="Редактирование профиля" WindowStartupLocation="CenterScreen" >
+        Title="Editar perfil" WindowStartupLocation="CenterScreen" >
     <Grid RenderTransformOrigin="0.048,0.142">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="147*"/>
@@ -54,19 +54,19 @@
                         <GradientStop Color="#FF422449" Offset="1"/>
                     </LinearGradientBrush>
                 </Grid.Background>
-                <Label Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Width="60">Логин</Label>
+                <Label Grid.Row="0" Grid.Column="1" Margin="0,0,129,0">Inicio de sesión</Label>
                 <TextBox x:Name="Login" Grid.Row="1" Grid.Column="1" BorderBrush="{x:Null}">
                     <TextBox.Background>
                         <ImageBrush ImageSource="/Resources/Line.png"/>
                     </TextBox.Background>
                 </TextBox>
-                <Label Grid.Row="3" Grid.Column="1">Электронная почта</Label>
+                <Label Grid.Row="3" Grid.Column="1">Correo electrónico</Label>
                 <TextBox x:Name="Mail" Grid.Row="4" Grid.Column="1" BorderBrush="{x:Null}" IsReadOnly ="True">
                     <TextBox.Background>
                         <ImageBrush ImageSource="/Resources/Line.png"/>
                     </TextBox.Background>
                 </TextBox>
-                <Label Grid.Row="6" Grid.Column="1">Пароль</Label>
+                <Label Grid.Row="6" Grid.Column="1">Contraseña</Label>
                 <TextBox x:Name="Password" Grid.Row="7" Grid.Column="1" BorderBrush="{x:Null}">
                     <TextBox.Background>
                         <ImageBrush ImageSource="/Resources/Line.png"/>
@@ -74,30 +74,27 @@
                 </TextBox>
             </Grid>
 
-            <!--<Button Style="{StaticResource Research}" Grid.Row="0" Content="Редактировать" HorizontalAlignment="Right" Margin="0,0,170,29" Width="164" Height="38" VerticalAlignment="Bottom" FontWeight="Bold" Click="Button_Click" Panel.ZIndex="2"></Button>-->
-
             <Menu Style="{StaticResource menu}" Height="24" VerticalAlignment="Bottom" Margin="0,0,224,58" HorizontalAlignment="Right" Width="133" Panel.ZIndex="3">
-                <MenuItem Style="{StaticResource menuitem}" Header="Редактировать" Height="24" Width="133" >
+                <MenuItem Style="{StaticResource menuitem}" Header="Subir foto" Height="24" Width="133" >
                     <MenuItem.Icon>
                         <Image Source="C:\Users\Полина\Desktop\Calanthe\Calanthe\Profil\Pencil.png"/>
                     </MenuItem.Icon>
-                    <MenuItem x:Name="NewFoto"  Style="{StaticResource menuitem}" Header="Загрузить" Click="NewFoto_Click"/>
-                    <MenuItem x:Name="Del"  Style="{StaticResource menuitem}" Header="Удалить" Click="Del_Click"/>
+                    <MenuItem x:Name="NewFoto"  Style="{StaticResource menuitem}" Header="Cargar" Click="NewFoto_Click"/>
+                    <MenuItem x:Name="Del"  Style="{StaticResource menuitem}" Header="Eliminar" Click="Del_Click"/>
                 </MenuItem>
 
             </Menu>
-
 
             <Ellipse x:Name="imageEllipse" Grid.Row="0" Margin="268,44,268,29"></Ellipse>
         </Grid>
 
         <Image Grid.Row="0" Grid.Column="2" Source="/Resources/Logo.ico" Margin="0,0,6,0" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" />
 
-        <Button Style="{StaticResource Base}" x:Name="Back_b" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Margin="16,28,16,27" Content="Назад" Click="Back_b_Click"></Button>
+        <Button Style="{StaticResource Base}" x:Name="Back_b" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Margin="16,28,16,27" Content="Atrás" Click="Back_b_Click"></Button>
 
         <WrapPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" >
-            <Button  x:Name="Save_b" Content="Сохранить" Margin="0,0,40,0" Click="Save_b_Click" />
-            <Button  x:Name="GoOut_b" Content="Выйти" Click="GoOut_b_Click" />
+            <Button  x:Name="Save_b" Content="Guardar" Margin="0,0,40,0" Click="Save_b_Click" />
+            <Button  x:Name="GoOut_b" Content="Salir" Click="GoOut_b_Click" />
         </WrapPanel>
     </Grid>
 </Window>

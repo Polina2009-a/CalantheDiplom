@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calanthe"
         mc:Ignorable="d"
-        Title="Добавление слова" WindowStartupLocation="CenterScreen" >
+        Title="Añadir una palabra" WindowStartupLocation="CenterScreen" >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="147*"/>
@@ -39,23 +39,23 @@
                     <GradientStop Color="#FF3C2540" Offset="1"/>
                 </LinearGradientBrush>
             </Grid.Background>
-            <Label Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="34" Width="61">Слово</Label>
+            <Label Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="34" Width="71">Palabra</Label>
             <TextBox x:Name="Word" Grid.Row="1" Grid.Column="1" BorderBrush="{x:Null}">
                 <TextBox.Background>
                     <ImageBrush ImageSource="/Resources/Line.png"/>
                 </TextBox.Background>
             </TextBox>
-            <Label Grid.Row="3" Grid.Column="1" VerticalAlignment="Bottom" Height="34">Перевод</Label>
+            <Label Grid.Row="3" Grid.Column="1" VerticalAlignment="Bottom" Height="34">Traducción</Label>
             <TextBox x:Name="Translite" Grid.Row="4" Grid.Column="1" BorderBrush="{x:Null}" Margin="0,10,0,0">
                 <TextBox.Background>
                     <ImageBrush ImageSource="/Resources/Line.png"/>
                 </TextBox.Background>
             </TextBox>
         </Grid>
-        <Button Style="{StaticResource Base}" x:Name="Back_b" Grid.Column="0" Content="Назад" Grid.Row="0" Width="Auto" Height="Auto" Margin="16,28,16,27" Click="Back_b_Click" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin"></Button>
+        <Button Style="{StaticResource Base}" x:Name="Back_b" Grid.Column="0" Content="Atrás" Grid.Row="0" Width="Auto" Height="Auto" Margin="16,28,16,27" Click="Back_b_Click" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin"></Button>
 
         <WrapPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" >
-            <Button x:Name="Save_b" Content="Сохранить" Click="Save_b_Click"/>
+            <Button x:Name="Save_b" Content="Guardar" Click="Save_b_Click"/>
         </WrapPanel>
     </Grid>
 </Window>

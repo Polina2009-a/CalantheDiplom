@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calanthe"
         mc:Ignorable="d"
-        Title="Авторизация" WindowStartupLocation="CenterScreen" >
+        Title="Lección" WindowStartupLocation="CenterScreen" >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="147*"/>
@@ -46,14 +46,14 @@
         </ScrollViewer>
 
         <WrapPanel Visibility="Hidden" x:Name="PanelMenu" Grid.Column="1" Grid.Row="1" Margin="180,0,180,0" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button  x:Name="Teoria_b" Grid.Column="1" Grid.Row="2" Content="Теория" Margin="0,0,0,20" Click="Teoria_b_Click" />
-            <Button  x:Name="Practic_b" Grid.Column="1" Grid.Row="2" Content="Практика" Margin="0,0,0,20" Click="Practic_b_Click" />
+            <Button  x:Name="Teoria_b" Grid.Column="1" Grid.Row="2" Content="Teoría" Margin="0,0,0,20" Click="Teoria_b_Click" />
+            <Button  x:Name="Practic_b" Grid.Column="1" Grid.Row="2" Content="Práctica" Margin="0,0,0,20" Click="Practic_b_Click" />
         </WrapPanel>
-        <Button Visibility="Hidden" x:Name="Dictionary_b" Grid.Column="2" Grid.Row="2" Content="Словарь" Margin="-212,10,57,24" Width="Auto" Click="Dictionary_b_Click"/>
+        <Button Visibility="Hidden" x:Name="Dictionary_b" Grid.Column="2" Grid.Row="2" Content="Diccionario" Margin="-212,10,57,24" Width="Auto" Click="Dictionary_b_Click"/>
 
         <Grid x:Name="PeacticAlphabet"  Visibility="Hidden" Grid.Column="1" Margin="10,0,0,0" Grid.Row="1" >
             <ScrollViewer >
-                <ListView Width="894" Background="#FF1C223A">
+                <ListView Width="894" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
                     <Expander Style="{StaticResource ex}" Header="¿Cuántas letras hay en el alfabeto ruso?">
                         <TextBox x:Name="PeacticAlphabet1" Style="{StaticResource textbox}" Width="280" ></TextBox>
                 </Expander>
@@ -91,7 +91,7 @@
                 <Expander Style="{StaticResource ex}" Header="sdvdsxv sdzv s?">
                     <TextBox Width="280"></TextBox>
                 </Expander>
-                <Button Content="Сохранить"></Button>
+                <Button Content="Guardar"></Button>
             </ListView>
         </ScrollViewer>
     </Grid>

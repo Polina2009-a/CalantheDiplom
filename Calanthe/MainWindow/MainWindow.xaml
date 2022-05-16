@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calanthe"
         mc:Ignorable="d"
-        Title="Главное окно" WindowStartupLocation="CenterScreen" >
+        Title="Ventana principal" WindowStartupLocation="CenterScreen" >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="147*"/>

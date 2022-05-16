@@ -75,7 +75,7 @@ namespace Calanthe
                 }
             }
             db.SaveChanges();
-            MessageBox.Show("Сохранено!");
+            MessageBox.Show("Guardado!");
         }
 
         private static BitmapImage LoadImage(byte[] imageData)
@@ -126,7 +126,7 @@ namespace Calanthe
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Ошибка");
+                    MessageBox.Show("Error!");
                 }
             }
         }
@@ -148,7 +148,6 @@ namespace Calanthe
                 }
             }
             db.SaveChanges();
-
         }
     }
 }

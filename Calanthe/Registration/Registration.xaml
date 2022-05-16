@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calanthe"
         mc:Ignorable="d"
-        Title="Регистрация" WindowStartupLocation="CenterScreen" >
+        Title="Registro" WindowStartupLocation="CenterScreen" >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="147*"/>
@@ -42,29 +42,29 @@
                     <GradientStop Color="#FF3C2540" Offset="1"/>
                 </LinearGradientBrush>
             </Grid.Background>
-            <Label Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Bottom">Логин</Label>
+            <Label Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Bottom">Inicio de sesión</Label>
             <TextBox x:Name="Login" Grid.Row="1" Grid.Column="1" BorderBrush="{x:Null}">
                 <TextBox.Background>
                     <ImageBrush ImageSource="/Resources/Line.png"/>
                 </TextBox.Background>
             </TextBox>
-            <Label Grid.Row="3" Grid.Column="1" VerticalAlignment="Bottom">Электронная почта</Label>
+            <Label Grid.Row="3" Grid.Column="1" VerticalAlignment="Bottom">Correo electrónico</Label>
             <TextBox x:Name="Mail" Grid.Row="4" Grid.Column="1" BorderBrush="{x:Null}">
                 <TextBox.Background>
                     <ImageBrush ImageSource="/Resources/Line.png"/>
                 </TextBox.Background>
             </TextBox>
-            <Label Grid.Row="6" Grid.Column="1" VerticalAlignment="Bottom">Пароль</Label>
+            <Label Grid.Row="6" Grid.Column="1" VerticalAlignment="Bottom">Contraseña</Label>
             <TextBox x:Name="Password" Grid.Row="7" Grid.Column="1" BorderBrush="{x:Null}">
                 <TextBox.Background>
                     <ImageBrush ImageSource="/Resources/Line.png"/>
                 </TextBox.Background>
             </TextBox>
         </Grid>
-        <Button Style="{StaticResource Base}" x:Name="Back_b" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Margin="16,28,16,27" Content="Назад" Click="Back_b_Click" >
+        <Button Style="{StaticResource Base}" x:Name="Back_b" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Margin="16,28,16,27" Content="Atrás" Click="Back_b_Click" >
         </Button>
         <WrapPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" >
-            <Button x:Name="Continue_b" Content="Продолжить" Click="Continue_b_Click"/>
+            <Button x:Name="Continue_b" Content="Continuar" Click="Continue_b_Click"/>
         </WrapPanel>
     </Grid>
 </Window>

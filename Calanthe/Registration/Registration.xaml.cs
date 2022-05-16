@@ -44,7 +44,7 @@ namespace Calanthe
             byte[] buffer;
             buffer = System.IO.File.ReadAllBytes(@"ziro_foto.png");
 
-            if (Password.Text == "" || Login.Text == "" || Mail.Text == "") MessageBox.Show("Вы ввели не все данные!");
+            if (Password.Text == "" || Login.Text == "" || Mail.Text == "") MessageBox.Show("No ha introducido todos los datos!");
 
             else
             {
@@ -85,13 +85,13 @@ namespace Calanthe
                                 this.Close();
                                 _win.Show();
                             }
-                            else MessageBox.Show("Пароль должен быть более 8 символов!");
+                            else MessageBox.Show("La contraseña debe ser de más de 8 caracteres!");
                         }
-                        else MessageBox.Show("Электронная почта должна быть в формате:.. @ .. . ..!");
+                        else MessageBox.Show("El correo electrónico debe estar en formato: .. @ .. . ..!");
                     }
-                    else MessageBox.Show("Электронная почта должна быть в формате:.. @ .. . ..!");
+                    else MessageBox.Show("El correo electrónico debe estar en formato: .. @ .. . ..!");
                 }
-                if(n == 1) MessageBox.Show("Эта почта уже используется!");
+                if(n == 1) MessageBox.Show("Este correo ya ha sido usado!");
             }
         }
     }

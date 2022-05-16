@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calanthe"
         mc:Ignorable="d"
-        Title="Профиль" WindowStartupLocation="CenterScreen" >
+        Title="Perfil" WindowStartupLocation="CenterScreen" >
     <Grid RenderTransformOrigin="0.048,0.142">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="147*"/>
@@ -65,10 +65,10 @@
 
         <Image Grid.Row="0" Grid.Column="2" Source="/Resources/Logo.ico" Margin="0,0,6,0" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" />
 
-        <Button Style="{StaticResource Base}" x:Name="Back_b" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Content="Назад" Margin="16,28,16,27" Click="Back_b_Click"></Button>
+        <Button Style="{StaticResource Base}" x:Name="Back_b" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Content="Atrás" Margin="16,28,16,27" Click="Back_b_Click"></Button>
 
-        <WrapPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" >
-            <Button  x:Name="Continue_b" Content="Настройки"  Margin="0,20,0,0" Click="Continue_b_Click"/>
+        <WrapPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center">
+            <Button  x:Name="Continue_b" Content="Ajustes"  Margin="0,20,0,0" Click="Continue_b_Click"/>
         </WrapPanel>
     </Grid>
 </Window>

@@ -74,28 +74,154 @@ namespace Calanthe
                     rcg4.Fill = Brushes.Blue;
                     break;
                 case 5:
+                    rcg1.Fill = Brushes.Blue;
+                    rcg2.Fill = Brushes.Blue;
+                    rcg3.Fill = Brushes.Blue;
+                    rcg4.Fill = Brushes.Blue;
+                    rcg5.Fill = Brushes.Goldenrod;
                     break;
                 case 6:
+                    rcg1.Fill = Brushes.Blue;
+                    rcg2.Fill = Brushes.Blue;
+                    rcg3.Fill = Brushes.Blue;
+                    rcg4.Fill = Brushes.Blue;
+                    rcg5.Fill = Brushes.Goldenrod;
+                    rcg6.Fill = Brushes.Goldenrod;
                     break;
                 case 7:
+                    rcg1.Fill = Brushes.Blue;
+                    rcg2.Fill = Brushes.Blue;
+                    rcg3.Fill = Brushes.Blue;
+                    rcg4.Fill = Brushes.Blue;
+                    rcg5.Fill = Brushes.Blue;
+                    rcg6.Fill = Brushes.Goldenrod;
+                    rcg7.Fill = Brushes.Goldenrod;
                     break;
                 case 8:
+                    rcg1.Fill = Brushes.Blue;
+                    rcg2.Fill = Brushes.Blue;
+                    rcg3.Fill = Brushes.Blue;
+                    rcg4.Fill = Brushes.Blue;
+                    rcg5.Fill = Brushes.Blue;
+                    rcg6.Fill = Brushes.Goldenrod;
+                    rcg7.Fill = Brushes.Goldenrod;
+                    rcg8.Fill = Brushes.Goldenrod;
                     break;
                 case 9:
+                    rcg1.Fill = Brushes.Blue;
+                    rcg2.Fill = Brushes.Blue;
+                    rcg3.Fill = Brushes.Blue;
+                    rcg4.Fill = Brushes.Blue;
+                    rcg5.Fill = Brushes.Blue;
+                    rcg6.Fill = Brushes.Goldenrod;
+                    rcg7.Fill = Brushes.Goldenrod;
+                    rcg8.Fill = Brushes.Goldenrod;
+                    rcg9.Fill = Brushes.Fuchsia;
                     break;
                 case 10:
+                    rcg1.Fill = Brushes.Blue;
+                    rcg2.Fill = Brushes.Blue;
+                    rcg3.Fill = Brushes.Blue;
+                    rcg4.Fill = Brushes.Blue;
+                    rcg5.Fill = Brushes.Blue;
+                    rcg6.Fill = Brushes.Goldenrod;
+                    rcg7.Fill = Brushes.Goldenrod;
+                    rcg8.Fill = Brushes.Goldenrod;
+                    rcg9.Fill = Brushes.Fuchsia;
+                    rcg10.Fill = Brushes.Fuchsia;
                     break;
                 case 11:
+                    rcg1.Fill = Brushes.Blue;
+                    rcg2.Fill = Brushes.Blue;
+                    rcg3.Fill = Brushes.Blue;
+                    rcg4.Fill = Brushes.Blue;
+                    rcg5.Fill = Brushes.Blue;
+                    rcg6.Fill = Brushes.Goldenrod;
+                    rcg7.Fill = Brushes.Goldenrod;
+                    rcg8.Fill = Brushes.Goldenrod;
+                    rcg9.Fill = Brushes.Fuchsia;
+                    rcg10.Fill = Brushes.Fuchsia;
+                    rcg11.Fill = Brushes.Fuchsia;
                     break;
                 case 12:
+                    rcg1.Fill = Brushes.Blue;
+                    rcg2.Fill = Brushes.Blue;
+                    rcg3.Fill = Brushes.Blue;
+                    rcg4.Fill = Brushes.Blue;
+                    rcg5.Fill = Brushes.Blue;
+                    rcg6.Fill = Brushes.Goldenrod;
+                    rcg7.Fill = Brushes.Goldenrod;
+                    rcg8.Fill = Brushes.Goldenrod;
+                    rcg9.Fill = Brushes.Fuchsia;
+                    rcg10.Fill = Brushes.Fuchsia;
+                    rcg11.Fill = Brushes.Fuchsia;
+                    rcg12.Fill = Brushes.Fuchsia;
                     break;
                 case 13:
+                    rcg1.Fill = Brushes.Blue;
+                    rcg2.Fill = Brushes.Blue;
+                    rcg3.Fill = Brushes.Blue;
+                    rcg4.Fill = Brushes.Blue;
+                    rcg5.Fill = Brushes.Blue;
+                    rcg6.Fill = Brushes.Goldenrod;
+                    rcg7.Fill = Brushes.Goldenrod;
+                    rcg8.Fill = Brushes.Goldenrod;
+                    rcg9.Fill = Brushes.Fuchsia;
+                    rcg10.Fill = Brushes.Fuchsia;
+                    rcg11.Fill = Brushes.Fuchsia;
+                    rcg12.Fill = Brushes.Fuchsia;
+                    rcg13.Fill = Brushes.GreenYellow;
                     break;
                 case 14:
+                    rcg1.Fill = Brushes.Blue;
+                    rcg2.Fill = Brushes.Blue;
+                    rcg3.Fill = Brushes.Blue;
+                    rcg4.Fill = Brushes.Blue;
+                    rcg5.Fill = Brushes.Blue;
+                    rcg6.Fill = Brushes.Goldenrod;
+                    rcg7.Fill = Brushes.Goldenrod;
+                    rcg8.Fill = Brushes.Goldenrod;
+                    rcg9.Fill = Brushes.Fuchsia;
+                    rcg10.Fill = Brushes.Fuchsia;
+                    rcg11.Fill = Brushes.Fuchsia;
+                    rcg12.Fill = Brushes.Fuchsia;
+                    rcg13.Fill = Brushes.GreenYellow;
+                    rcg14.Fill = Brushes.GreenYellow;
                     break;
                 case 15:
+                    rcg1.Fill = Brushes.Blue;
+                    rcg2.Fill = Brushes.Blue;
+                    rcg3.Fill = Brushes.Blue;
+                    rcg4.Fill = Brushes.Blue;
+                    rcg5.Fill = Brushes.Blue;
+                    rcg6.Fill = Brushes.Goldenrod;
+                    rcg7.Fill = Brushes.Goldenrod;
+                    rcg8.Fill = Brushes.Goldenrod;
+                    rcg9.Fill = Brushes.Fuchsia;
+                    rcg10.Fill = Brushes.Fuchsia;
+                    rcg11.Fill = Brushes.Fuchsia;
+                    rcg12.Fill = Brushes.Fuchsia;
+                    rcg13.Fill = Brushes.GreenYellow;
+                    rcg14.Fill = Brushes.GreenYellow;
+                    rcg15.Fill = Brushes.GreenYellow;
                     break;
                 case 16:
+                    rcg1.Fill = Brushes.Blue;
+                    rcg2.Fill = Brushes.Blue;
+                    rcg3.Fill = Brushes.Blue;
+                    rcg4.Fill = Brushes.Blue;
+                    rcg5.Fill = Brushes.Blue;
+                    rcg6.Fill = Brushes.Goldenrod;
+                    rcg7.Fill = Brushes.Goldenrod;
+                    rcg8.Fill = Brushes.Goldenrod;
+                    rcg9.Fill = Brushes.Fuchsia;
+                    rcg10.Fill = Brushes.Fuchsia;
+                    rcg11.Fill = Brushes.Fuchsia;
+                    rcg12.Fill = Brushes.Fuchsia;
+                    rcg13.Fill = Brushes.GreenYellow;
+                    rcg14.Fill = Brushes.GreenYellow;
+                    rcg15.Fill = Brushes.GreenYellow;
+                    rcg16.Fill = Brushes.GreenYellow;
                     break;
             }
         }

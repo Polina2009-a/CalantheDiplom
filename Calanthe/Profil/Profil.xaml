@@ -41,22 +41,22 @@
                 <Rectangle x:Name="rcg4" Style="{DynamicResource Res_1}"></Rectangle>
             </WrapPanel>
             <WrapPanel Grid.Row="4">
-                <Rectangle Style="{DynamicResource Res_2}"></Rectangle>
-                <Rectangle Style="{DynamicResource Res_2}"></Rectangle>
-                <Rectangle Style="{DynamicResource Res_2}"></Rectangle>
-                <Rectangle Style="{DynamicResource Res_2}"></Rectangle>
+                <Rectangle x:Name="rcg5" Style="{DynamicResource Res_2}"></Rectangle>
+                <Rectangle x:Name="rcg6" Style="{DynamicResource Res_2}"></Rectangle>
+                <Rectangle x:Name="rcg7" Style="{DynamicResource Res_2}"></Rectangle>
+                <Rectangle x:Name="rcg8" Style="{DynamicResource Res_2}"></Rectangle>
             </WrapPanel>
             <WrapPanel Grid.Row="6">
-                <Rectangle Style="{DynamicResource Res_3}"></Rectangle>
-                <Rectangle Style="{DynamicResource Res_3}"></Rectangle>
-                <Rectangle Style="{DynamicResource Res_3}"></Rectangle>
-                <Rectangle Style="{DynamicResource Res_3}"></Rectangle>
+                <Rectangle x:Name="rcg9" Style="{DynamicResource Res_3}"></Rectangle>
+                <Rectangle x:Name="rcg10" Style="{DynamicResource Res_3}"></Rectangle>
+                <Rectangle x:Name="rcg11" Style="{DynamicResource Res_3}"></Rectangle>
+                <Rectangle x:Name="rcg12" Style="{DynamicResource Res_3}"></Rectangle>
             </WrapPanel>
             <WrapPanel Grid.Row="8">
-                <Rectangle Style="{DynamicResource Res_4}"></Rectangle>
-                <Rectangle Style="{DynamicResource Res_4}"></Rectangle>
-                <Rectangle Style="{DynamicResource Res_4}"></Rectangle>
-                <Rectangle Style="{DynamicResource Res_4}"></Rectangle>
+                <Rectangle x:Name="rcg13" Style="{DynamicResource Res_4}"></Rectangle>
+                <Rectangle x:Name="rcg14" Style="{DynamicResource Res_4}"></Rectangle>
+                <Rectangle x:Name="rcg15" Style="{DynamicResource Res_4}"></Rectangle>
+                <Rectangle x:Name="rcg16" Style="{DynamicResource Res_4}"></Rectangle>
             </WrapPanel>
 
             <Ellipse x:Name="imageEllipse" Grid.Row="0" Margin="273,46,271,35"></Ellipse>

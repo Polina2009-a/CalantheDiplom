@@ -149,5 +149,31 @@ namespace Calanthe
             }
             db.SaveChanges();
         }
+
+        private void Password_pb_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            Password.Text = Password_pb.Password;
+        }
+
+        private void Password_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Password_pb.Password = Password.Text;
+        }
+
+        private void eye_Click(object sender, RoutedEventArgs e)
+        {
+            if (Password_pb.Visibility == Visibility.Visible)
+            {
+                Password_pb.Visibility = Visibility.Collapsed;
+                Password.Visibility = Visibility.Visible;
+                Password.Text = Password_pb.Password;
+            }
+            else
+            {
+                Password_pb.Visibility = Visibility.Visible;
+                Password.Visibility = Visibility.Collapsed;
+                Password_pb.Password = Password.Text;
+            }
+        }
     }
 }

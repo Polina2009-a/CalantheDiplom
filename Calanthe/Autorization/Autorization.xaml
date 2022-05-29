@@ -51,11 +51,21 @@
                 </TextBox.Background>
             </TextBox>
             <Label Grid.Row="3" Grid.Column="1" VerticalAlignment="Bottom">Contraseña</Label>
-            <PasswordBox x:Name="Password" Grid.Row="4" Grid.Column="1" BorderBrush="{x:Null}">
+            <PasswordBox x:Name="Password" Visibility="Hidden"  Grid.Row="4" Grid.Column="1" BorderBrush="{x:Null}" PasswordChanged="Password_PasswordChanged" Margin="0,0,34,0" >
                 <PasswordBox.Background>
                     <ImageBrush ImageSource="/Resources/Line.png"/>
                 </PasswordBox.Background>
             </PasswordBox>
+            <TextBox x:Name="Password_tb"  Grid.Row="4" BorderBrush="{x:Null}" Grid.Column="1" TextChanged="Password_tb_TextChanged" Margin="0,0,34,0">
+                <TextBox.Background>
+                    <ImageBrush ImageSource="/Resources/Line.png"/>
+                </TextBox.Background>
+            </TextBox>
+            <Button x:Name="eye" Style="{StaticResource eye}" Grid.Column="1"  Grid.Row="4" HorizontalAlignment="Right" Foreground="{x:Null}" BorderBrush="{x:Null}" Width="34" Click="eye_Click">
+                <Button.Background>
+                    <ImageBrush Stretch="Uniform" ImageSource="/Calanthe;component/Resources/Eye.png"/>
+                </Button.Background>
+            </Button>
             <TextBlock Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18"><Hyperlink Foreground="#FFDB53FF" Click="Hyperlink_Click">Recuperar contraseña?</Hyperlink></TextBlock>
         </Grid>
         <Button Style="{StaticResource Base}" x:Name="Back_b" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Content="Atrás" Margin="16,28,16,27" Click="Back_b_Click"></Button>

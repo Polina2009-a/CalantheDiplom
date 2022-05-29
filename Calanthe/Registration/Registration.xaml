@@ -55,11 +55,21 @@
                 </TextBox.Background>
             </TextBox>
             <Label Grid.Row="6" Grid.Column="1" VerticalAlignment="Bottom">Contraseña</Label>
-            <TextBox x:Name="Password" Grid.Row="7" Grid.Column="1" BorderBrush="{x:Null}">
+            <PasswordBox x:Name="Password_pb"  Visibility="Hidden" Grid.Row="7" Grid.Column="1"  BorderBrush="{x:Null}" PasswordChanged="Password_pb_PasswordChanged" Margin="0,0,34,0">
+                <PasswordBox.Background>
+                    <ImageBrush ImageSource="/Resources/Line.png"/>
+                </PasswordBox.Background>
+            </PasswordBox>
+            <TextBox x:Name="Password"  Grid.Row="7" Grid.Column="1" BorderBrush="{x:Null}" TextChanged="Password_TextChanged" Margin="0,0,34,0">
                 <TextBox.Background>
                     <ImageBrush ImageSource="/Resources/Line.png"/>
                 </TextBox.Background>
             </TextBox>
+            <Button x:Name="eye" Style="{StaticResource eye}" Grid.Column="1"  Grid.Row="7" HorizontalAlignment="Right" Foreground="{x:Null}" BorderBrush="{x:Null}" Width="34" Click="eye_Click">
+                <Button.Background>
+                    <ImageBrush Stretch="Uniform" ImageSource="/Calanthe;component/Resources/Eye.png"/>
+                </Button.Background>
+            </Button>
         </Grid>
         <Button Style="{StaticResource Base}" x:Name="Back_b" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Margin="16,28,16,27" Content="Atrás" Click="Back_b_Click" >
         </Button>

@@ -128,6 +128,33 @@ namespace Calanthe
             {
                 MessageBox.Show("No hay conexión a Internet o este correo electrónico no existe!");
             }
-        }  
+        }
+
+        private void Password_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            Password_tb.Text = Password.Password;
+        }
+
+        private void Password_tb_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Password.Password = Password_tb.Text;
+        }
+
+        private void eye_Click(object sender, RoutedEventArgs e)
+        {
+            if (Password.Visibility == Visibility.Visible)
+            {
+                Password.Visibility = Visibility.Collapsed;
+                Password_tb.Visibility = Visibility.Visible;
+                Password_tb.Text = Password.Password;
+            }
+            else
+            {
+                Password.Visibility = Visibility.Visible;
+                Password_tb.Visibility = Visibility.Collapsed;
+                Password.Password = Password_tb.Text;
+            }
+
+        }
     }
 }

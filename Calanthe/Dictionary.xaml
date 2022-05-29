@@ -168,4 +168,11 @@
         <Setter Property="Width" Value="100"/>
         <Setter Property="Height" Value="100"/>
     </Style>
+
+    <Style TargetType="Button" x:Key="eye">
+        <Setter Property="Background" Value="#FF31334F"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Width" Value="66"/>
+
+    </Style>
 </ResourceDictionary>

@@ -93,7 +93,7 @@ namespace Calanthe
                     rcg2.Fill = Brushes.Blue;
                     rcg3.Fill = Brushes.Blue;
                     rcg4.Fill = Brushes.Blue;
-                    rcg5.Fill = Brushes.Blue;
+                    rcg5.Fill = Brushes.Goldenrod;
                     rcg6.Fill = Brushes.Goldenrod;
                     rcg7.Fill = Brushes.Goldenrod;
                     break;
@@ -102,7 +102,7 @@ namespace Calanthe
                     rcg2.Fill = Brushes.Blue;
                     rcg3.Fill = Brushes.Blue;
                     rcg4.Fill = Brushes.Blue;
-                    rcg5.Fill = Brushes.Blue;
+                    rcg5.Fill = Brushes.Goldenrod;
                     rcg6.Fill = Brushes.Goldenrod;
                     rcg7.Fill = Brushes.Goldenrod;
                     rcg8.Fill = Brushes.Goldenrod;
@@ -112,7 +112,7 @@ namespace Calanthe
                     rcg2.Fill = Brushes.Blue;
                     rcg3.Fill = Brushes.Blue;
                     rcg4.Fill = Brushes.Blue;
-                    rcg5.Fill = Brushes.Blue;
+                    rcg5.Fill = Brushes.Goldenrod;
                     rcg6.Fill = Brushes.Goldenrod;
                     rcg7.Fill = Brushes.Goldenrod;
                     rcg8.Fill = Brushes.Goldenrod;
@@ -123,7 +123,7 @@ namespace Calanthe
                     rcg2.Fill = Brushes.Blue;
                     rcg3.Fill = Brushes.Blue;
                     rcg4.Fill = Brushes.Blue;
-                    rcg5.Fill = Brushes.Blue;
+                    rcg5.Fill = Brushes.Goldenrod;
                     rcg6.Fill = Brushes.Goldenrod;
                     rcg7.Fill = Brushes.Goldenrod;
                     rcg8.Fill = Brushes.Goldenrod;
@@ -135,7 +135,7 @@ namespace Calanthe
                     rcg2.Fill = Brushes.Blue;
                     rcg3.Fill = Brushes.Blue;
                     rcg4.Fill = Brushes.Blue;
-                    rcg5.Fill = Brushes.Blue;
+                    rcg5.Fill = Brushes.Goldenrod;
                     rcg6.Fill = Brushes.Goldenrod;
                     rcg7.Fill = Brushes.Goldenrod;
                     rcg8.Fill = Brushes.Goldenrod;
@@ -148,7 +148,7 @@ namespace Calanthe
                     rcg2.Fill = Brushes.Blue;
                     rcg3.Fill = Brushes.Blue;
                     rcg4.Fill = Brushes.Blue;
-                    rcg5.Fill = Brushes.Blue;
+                    rcg5.Fill = Brushes.Goldenrod;
                     rcg6.Fill = Brushes.Goldenrod;
                     rcg7.Fill = Brushes.Goldenrod;
                     rcg8.Fill = Brushes.Goldenrod;
@@ -162,7 +162,7 @@ namespace Calanthe
                     rcg2.Fill = Brushes.Blue;
                     rcg3.Fill = Brushes.Blue;
                     rcg4.Fill = Brushes.Blue;
-                    rcg5.Fill = Brushes.Blue;
+                    rcg5.Fill = Brushes.Goldenrod;
                     rcg6.Fill = Brushes.Goldenrod;
                     rcg7.Fill = Brushes.Goldenrod;
                     rcg8.Fill = Brushes.Goldenrod;
@@ -177,7 +177,7 @@ namespace Calanthe
                     rcg2.Fill = Brushes.Blue;
                     rcg3.Fill = Brushes.Blue;
                     rcg4.Fill = Brushes.Blue;
-                    rcg5.Fill = Brushes.Blue;
+                    rcg5.Fill = Brushes.Goldenrod;
                     rcg6.Fill = Brushes.Goldenrod;
                     rcg7.Fill = Brushes.Goldenrod;
                     rcg8.Fill = Brushes.Goldenrod;
@@ -193,7 +193,7 @@ namespace Calanthe
                     rcg2.Fill = Brushes.Blue;
                     rcg3.Fill = Brushes.Blue;
                     rcg4.Fill = Brushes.Blue;
-                    rcg5.Fill = Brushes.Blue;
+                    rcg5.Fill = Brushes.Goldenrod;
                     rcg6.Fill = Brushes.Goldenrod;
                     rcg7.Fill = Brushes.Goldenrod;
                     rcg8.Fill = Brushes.Goldenrod;
@@ -210,7 +210,7 @@ namespace Calanthe
                     rcg2.Fill = Brushes.Blue;
                     rcg3.Fill = Brushes.Blue;
                     rcg4.Fill = Brushes.Blue;
-                    rcg5.Fill = Brushes.Blue;
+                    rcg5.Fill = Brushes.Goldenrod;
                     rcg6.Fill = Brushes.Goldenrod;
                     rcg7.Fill = Brushes.Goldenrod;
                     rcg8.Fill = Brushes.Goldenrod;

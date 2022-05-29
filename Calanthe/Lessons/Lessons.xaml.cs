@@ -122,7 +122,7 @@ namespace Calanthe
 
             catch (Exception)
             {
-                MessageBox.Show("Error");
+                
             }
         }
 

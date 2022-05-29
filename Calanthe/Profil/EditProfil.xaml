@@ -67,11 +67,21 @@
                     </TextBox.Background>
                 </TextBox>
                 <Label Grid.Row="6" Grid.Column="1">Contraseña</Label>
-                <TextBox x:Name="Password" Grid.Row="7" Grid.Column="1" BorderBrush="{x:Null}">
+                <PasswordBox x:Name="Password_pb" Visibility="Hidden"  Grid.Row="7" Grid.Column="1"  BorderBrush="{x:Null}" PasswordChanged="Password_pb_PasswordChanged" Margin="0,0,34,0">
+                    <PasswordBox.Background>
+                        <ImageBrush ImageSource="/Resources/Line.png"/>
+                    </PasswordBox.Background>
+                </PasswordBox>
+                <TextBox x:Name="Password" Grid.Row="7"  Grid.Column="1" BorderBrush="{x:Null}" TextChanged="Password_TextChanged" Margin="0,0,37,0">
                     <TextBox.Background>
                         <ImageBrush ImageSource="/Resources/Line.png"/>
                     </TextBox.Background>
                 </TextBox>
+                <Button x:Name="eye" Style="{StaticResource eye}" Grid.Column="1"  Grid.Row="7" HorizontalAlignment="Left" Foreground="{x:Null}" BorderBrush="{x:Null}" Width="31" Click="eye_Click" Margin="229,0,0,0">
+                    <Button.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Calanthe;component/Resources/Eye.png"/>
+                    </Button.Background>
+                </Button>
             </Grid>
 
             <Menu Style="{StaticResource menu}" Height="24" VerticalAlignment="Bottom" Margin="0,0,224,58" HorizontalAlignment="Right" Width="133" Panel.ZIndex="3">

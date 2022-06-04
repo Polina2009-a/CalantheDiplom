@@ -151,7 +151,7 @@
     </Style>
 
     <Style TargetType="Expander" x:Key="ex">
-        <Setter Property="FontSize" Value="28"/>
+        <Setter Property="FontSize" Value="22"/>
         <Setter Property="IsExpanded" Value="True"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="Foreground" Value="White"/>
@@ -159,6 +159,7 @@
 
     <Style TargetType="TextBox" x:Key="textbox">
         <Setter Property="FontSize" Value="30"/>
+        <Setter Property="Width" Value="280"/>
         <Setter Property="Foreground" Value="#FF171A27"/>
         <Setter Property="Margin" Value="20"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>

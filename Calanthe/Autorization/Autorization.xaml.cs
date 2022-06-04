@@ -154,7 +154,6 @@ namespace Calanthe
                 Password_tb.Visibility = Visibility.Collapsed;
                 Password.Password = Password_tb.Text;
             }
-
         }
     }
 }

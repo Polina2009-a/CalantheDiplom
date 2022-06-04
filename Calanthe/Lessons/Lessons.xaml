@@ -55,19 +55,19 @@
             <ScrollViewer >
                 <ListView Width="894" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
                     <Expander Style="{StaticResource ex}" Header="¿Cuántas letras hay en el alfabeto ruso?">
-                        <TextBox x:Name="PeacticAlphabet1" Style="{StaticResource textbox}" Width="280" ></TextBox>
+                        <TextBox x:Name="PeacticAlphabet1" Style="{StaticResource textbox}"></TextBox>
                 </Expander>
                     <Expander Style="{StaticResource ex}" Header="Encuentra la traducción del pronombre: Yo">
-                        <TextBox x:Name="PeacticAlphabet2" Style="{StaticResource textbox}"  Width="280"></TextBox>
+                        <TextBox x:Name="PeacticAlphabet2" Style="{StaticResource textbox}"></TextBox>
                 </Expander>
                     <Expander Style="{StaticResource ex}" Header="Cómo se escribe el número: Одна тысяча один?">
-                        <TextBox x:Name="PeacticAlphabet3"  Style="{StaticResource textbox}" Width="280"></TextBox>
+                        <TextBox x:Name="PeacticAlphabet3"  Style="{StaticResource textbox}"></TextBox>
                 </Expander>
                     <Expander Style="{StaticResource ex}" Header="¿Cuántas vocales hay en el alfabeto ruso?">
-                        <TextBox x:Name="PeacticAlphabet4" Style="{StaticResource textbox}" Width="280"></TextBox>
+                        <TextBox x:Name="PeacticAlphabet4" Style="{StaticResource textbox}"></TextBox>
                 </Expander>
                     <Expander Style="{StaticResource ex}" Header="Escribe la traducción del pronombre: Ella" >
-                        <TextBox x:Name="PeacticAlphabet5" Style="{StaticResource textbox}"  Width="280"></TextBox>
+                        <TextBox x:Name="PeacticAlphabet5" Style="{StaticResource textbox}"></TextBox>
                     </Expander>
                     <Button x:Name="SavePeacticAlphabet" Content="Listo" Click="SavePeacticAlphabet_Click"></Button>
             </ListView>
@@ -75,23 +75,302 @@
         </Grid>
 
         <ScrollViewer  x:Name="PeacticNouns"  Visibility="Hidden" Grid.Column="1" Margin="10,0,0,0" Grid.Row="1" >
-            <ListView Background="#FF9A54AE" Width="894">
-                <Expander Style="{StaticResource ex}" Header="sdvdsxv sdzv s?">
-                    <TextBox Width="280"></TextBox>
+            <ListView Width="894" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Expander Style="{StaticResource ex}" Header="Nombra el género de la palabra: море">
+                    <TextBox x:Name="PeacticNouns1" Style="{StaticResource textbox}"></TextBox>
                 </Expander>
-                <Expander Style="{StaticResource ex}" Header="sdvdsxv sdzv s?">
-                    <TextBox Width="280"></TextBox>
+                <Expander Style="{StaticResource ex}" Header="Encuentra la palabra masculina entre estas palabras: стол, окно">
+                    <TextBox x:Name="PeacticNouns2" Style="{StaticResource textbox}"></TextBox>
                 </Expander>
-                <Expander Style="{StaticResource ex}" Header="sdvdsxv sdzv s?">
-                    <TextBox Width="280"></TextBox>
+                <Expander Style="{StaticResource ex}" Header="Nombra el género de la palabra: бабушка">
+                    <TextBox x:Name="PeacticNouns3" Style="{StaticResource textbox}"></TextBox>
                 </Expander>
-                <Expander Style="{StaticResource ex}" Header="sdvdsxv sdzv s?">
-                    <TextBox Width="280"></TextBox>
+                <Expander Style="{StaticResource ex}" Header="Encuentra la palabra masculina entre estas palabras: солнце, дверь">
+                    <TextBox x:Name="PeacticNouns4" Style="{StaticResource textbox}"></TextBox>
                 </Expander>
-                <Expander Style="{StaticResource ex}" Header="sdvdsxv sdzv s?">
-                    <TextBox Width="280"></TextBox>
+                <Expander Style="{StaticResource ex}" Header="Nombra el género de la palabra: виноград">
+                    <TextBox x:Name="PeacticNouns5" Style="{StaticResource textbox}"></TextBox>
                 </Expander>
-                <Button Content="Guardar"></Button>
+                <Button x:Name="SavePeacticNouns" Content="Listo" Click="SavePeacticNouns_Click"></Button>
+            </ListView>
+        </ScrollViewer>
+
+        <ScrollViewer  x:Name="PeacticAdjectives"  Visibility="Hidden" Grid.Column="1" Margin="10,0,0,0" Grid.Row="1" >
+            <ListView Width="894" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Expander Style="{StaticResource ex}" Header="Nombre del género en adjetivos: быстрый, удобный, большой">
+                    <TextBox x:Name="PeacticAdjectives1" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Traducir la frase al ruso: nos vemos!">
+                    <TextBox x:Name="PeacticAdjectives2" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Nombre del género en adjetivos: маленькое, скучное, яркое">
+                    <TextBox x:Name="PeacticAdjectives3" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Nombre del género en adjetivos: тёплая, детская, нормальная">
+                    <TextBox x:Name="PeacticAdjectives4" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Traducir la frase al ruso: buenas tardes!">
+                    <TextBox x:Name="PeacticAdjectives5" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Button x:Name="SavePeacticAdjectives" Content="Listo" Click="SavePeacticAdjectives_Click"></Button>
+            </ListView>
+        </ScrollViewer>
+
+        <ScrollViewer  x:Name="PeacticPronouns"  Visibility="Hidden" Grid.Column="1" Margin="10,0,0,0" Grid.Row="1" >
+            <ListView Width="894" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Expander Style="{StaticResource ex}" Header="Traduce el pronombre al español: этот">
+                    <TextBox x:Name="PeacticPronouns1" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga el pronombre entre paréntesis en la forma correcta: Это (ты) апельсины">
+                    <TextBox x:Name="PeacticPronouns2" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Traduce el pronombre al español: кто-нибудь">
+                    <TextBox x:Name="PeacticPronouns3" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga el pronombre entre paréntesis en la forma correcta: Это (я) тетрадь">
+                    <TextBox x:Name="PeacticPronouns4" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga el pronombre entre paréntesis en la forma correcta: Это (наш) цветы">
+                    <TextBox x:Name="PeacticPronouns5" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Button x:Name="SavePeacticPronouns" Content="Listo" Click="SavePeacticPronouns_Click"></Button>
+            </ListView>
+        </ScrollViewer>
+
+        <ScrollViewer  x:Name="PeacticVerbs1"  Visibility="Hidden" Grid.Column="1" Margin="10,0,0,0" Grid.Row="1" >
+            <ListView Width="894" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Expander Style="{StaticResource ex}" Header="Traduce el verbo al español: читать">
+                    <TextBox x:Name="PeacticVerbs11" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga el verbo en la forma correcta: мы (играть) в футбол">
+                    <TextBox x:Name="PeacticVerbs12" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Traduce el verbo al español: играть">
+                    <TextBox x:Name="PeacticVerbs13" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga el verbo en la forma correcta: я (отвечать) на вопрос">
+                    <TextBox x:Name="PeacticVerbs14" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Button x:Name="SavePeacticVerbs1" Content="Listo" Click="SavePeacticVerbs1_Click"></Button>
+            </ListView>
+        </ScrollViewer>
+        
+        <ScrollViewer  x:Name="PeacticVerbs2"  Visibility="Hidden" Grid.Column="1" Margin="10,0,0,0" Grid.Row="1" >
+            <ListView Width="894" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Expander Style="{StaticResource ex}" Header="Traduce el verbo al español: жить">
+                    <TextBox x:Name="PeacticVerbs21" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga el verbo en la forma correcta: я (любить) играть">
+                    <TextBox x:Name="PeacticVerbs22" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Traduce el verbo al español: пить">
+                    <TextBox x:Name="PeacticVerbs23" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga el verbo en la forma correcta: они (кричать)">
+                    <TextBox x:Name="PeacticVerbs24" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Button x:Name="SavePeacticVerbs2" Content="Listo" Click="SavePeacticVerbs2_Click"></Button>
+            </ListView>
+        </ScrollViewer>
+
+        <ScrollViewer  x:Name="PeacticAccusative"  Visibility="Hidden" Grid.Column="1" Margin="10,0,0,0" Grid.Row="1" >
+            <ListView Width="894" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Expander Style="{StaticResource ex}" Header="Ponga la palabra en el caso acusatorio: студент">
+                    <TextBox x:Name="PeacticAccusative1" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga la palabra entre paréntesis en el caso acusatorio: я пишу (письмо)">
+                    <TextBox x:Name="PeacticAccusative2" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga la palabra en el caso acusatorio: книга">
+                    <TextBox x:Name="PeacticAccusative3" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga la palabra entre paréntesis en el caso acusatorio: мы слушаем (музыка)">
+                    <TextBox x:Name="PeacticAccusative4" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga la palabra entre paréntesis en el caso acusatorio: суденты идут на (лекция)">
+                    <TextBox x:Name="PeacticAccusative5" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Button x:Name="SavePeacticAccusative" Content="Listo" Click="SavePeacticAccusative_Click"></Button>
+            </ListView>
+        </ScrollViewer>
+
+        <ScrollViewer  x:Name="PeacticDative"  Visibility="Hidden" Grid.Column="1" Margin="10,0,0,0" Grid.Row="1" >
+            <ListView Width="894" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Expander Style="{StaticResource ex}" Header="Ponga la palabra en el caso dativo: стюардесса">
+                    <TextBox x:Name="PeacticDative1" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga la palabra entre paréntesis en el caso dativo: я читаю книгу (брат)">
+                    <TextBox x:Name="PeacticDative2" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga la palabra en el caso dativo: моря">
+                    <TextBox x:Name="PeacticDative3" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga la palabra en el caso dativo: книга">
+                    <TextBox x:Name="PeacticDative4" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga la palabra entre paréntesis en el caso dativo: я иду по (улица)">
+                    <TextBox x:Name="PeacticDative5" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Button x:Name="SavePeacticDative" Content="Listo" Click="SavePeacticDative_Click"></Button>
+            </ListView>
+        </ScrollViewer>
+
+        <ScrollViewer  x:Name="PeacticGenitive"  Visibility="Hidden" Grid.Column="1" Margin="10,0,0,0" Grid.Row="1" >
+            <ListView Width="894" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Expander Style="{StaticResource ex}" Header="Ponga la palabra entre paréntesis en el genitivo: у (друзья) двое маленьких детей">
+                    <TextBox x:Name="PeacticGenitive1" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga la palabra entre paréntesis en el genitivo: на улице всегда много (люди)">
+                    <TextBox x:Name="PeacticGenitive2" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga la palabra entre paréntesis en el genitivo: Чехов А.П. написал пьесу 'Три (сестра)'">
+                    <TextBox x:Name="PeacticGenitive3" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga la palabra entre paréntesis en el genitivo: Счатливого (путь) тебе!">
+                    <TextBox x:Name="PeacticGenitive4" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga la palabra entre paréntesis en el genitivo: он принес коробку (конфеты)">
+                    <TextBox x:Name="PeacticGenitive5" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Button x:Name="SavePeacticGenitive" Content="Listo" Click="SavePeacticGenitive_Click"></Button>
+            </ListView>
+        </ScrollViewer>
+
+        <ScrollViewer  x:Name="PeacticAblative"  Visibility="Hidden" Grid.Column="1" Margin="10,0,0,0" Grid.Row="1" >
+            <ListView Width="894" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Expander Style="{StaticResource ex}" Header="Ponga la palabra entre paréntesis en el caso creativo: работает (юрист)">
+                    <TextBox x:Name="PeacticAblative1" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga la palabra entre paréntesis en el caso creativo: написано (ручка)">
+                    <TextBox x:Name="PeacticAblative2" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga la palabra entre paréntesis en el caso creativo: над (море)">
+                    <TextBox x:Name="PeacticAblative3" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga la palabra entre paréntesis en el caso creativo: махали (флажки)">
+                    <TextBox x:Name="PeacticAblative4" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga la palabra entre paréntesis en el caso creativo: богаты (витамины) ">
+                    <TextBox x:Name="PeacticAblative5" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Button x:Name="SavePeacticAblative" Content="Listo" Click="SavePeacticAblative_Click"></Button>
+            </ListView>
+        </ScrollViewer>
+
+        <ScrollViewer  x:Name="PeacticPrepositional"  Visibility="Hidden" Grid.Column="1" Margin="10,0,0,0" Grid.Row="1" >
+            <ListView Width="894" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Expander Style="{StaticResource ex}" Header="Ponga la palabra entre paréntesis en el caso preposicional: думать о (мать)">
+                    <TextBox x:Name="PeacticPrepositional1" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga la palabra entre paréntesis en el caso preposicional:играть на (гитара)">
+                    <TextBox x:Name="PeacticPrepositional2" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga la palabra entre paréntesis en el caso preposicional: мой друг пишет на (доска)">
+                    <TextBox x:Name="PeacticPrepositional3" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga la palabra entre paréntesis en el caso preposicional: фотографии висят на (стена)">
+                    <TextBox x:Name="PeacticPrepositional4" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Button x:Name="SavePeacticPrepositional" Content="Listo" Click="SavePeacticPrepositional_Click"></Button>
+            </ListView>
+        </ScrollViewer>
+
+        <ScrollViewer  x:Name="PeacticPast"  Visibility="Hidden" Grid.Column="1" Margin="10,0,0,0" Grid.Row="1" >
+            <ListView Width="894" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Expander Style="{StaticResource ex}" Header="Ponga el verbo en tiempo pasado en el género femenino: я (играть) с братом">
+                    <TextBox x:Name="PeacticPast1" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga el verbo en tiempo pasado en el género masculino: я (прочитать) эту книгу один год назад">
+                    <TextBox x:Name="PeacticPast2" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga el verbo en tiempo pasado: они (ходить) вместе в школу">
+                    <TextBox x:Name="PeacticPast3" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga el verbo en tiempo pasado: мы (ездить) на море">
+                    <TextBox x:Name="PeacticPast4" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Button x:Name="SavePeacticPast" Content="Listo" Click="SavePeacticPast_Click"></Button>
+            </ListView>
+        </ScrollViewer>
+
+        <ScrollViewer  x:Name="PeacticFuture"  Visibility="Hidden" Grid.Column="1" Margin="10,0,0,0" Grid.Row="1" >
+            <ListView Width="894" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Expander Style="{StaticResource ex}" Header="Encuentra el verbo en el tiempo futuro: сижу, сидела, буду сидеть">
+                    <TextBox x:Name="PeacticFuture1" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga el verbo entre paréntesis en el futuro: ты (читать) эту книгу завтра">
+                    <TextBox x:Name="PeacticFuture2" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga el verbo entre paréntesis en el futuro: я буду (ходить) на занятия">
+                    <TextBox x:Name="PeacticFuture3" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Ponga el verbo entre paréntesis en el futuro:  он (приготовить) завтрак">
+                    <TextBox x:Name="PeacticFuture4" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Button x:Name="SavePeacticFuture" Content="Listo" Click="SavePeacticFuture_Click"></Button>
+            </ListView>
+        </ScrollViewer>
+
+        <ScrollViewer  x:Name="PeacticParticles"  Visibility="Hidden" Grid.Column="1" Margin="10,0,0,0" Grid.Row="1" >
+            <ListView Width="894" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Expander Style="{StaticResource ex}" Header="Traduce la palabra al español: неужели">
+                    <TextBox x:Name="PeacticParticles1" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Encuentra la partícula en la oración: мы лишь раз его видели">
+                    <TextBox x:Name="PeacticParticles2" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Traduce la palabra al español: исключительно">
+                    <TextBox x:Name="PeacticParticles3" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Encuentra la partícula en la oración: возьми вот эту книгу">
+                    <TextBox x:Name="PeacticParticles4" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Encuentra la partícula en la oración: даже и не думай про это!">
+                    <TextBox x:Name="PeacticParticles5" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Button x:Name="SavePeacticParticles" Content="Listo" Click="SavePeacticParticles_Click"></Button>
+            </ListView>
+        </ScrollViewer>
+
+        <ScrollViewer  x:Name="PeacticQuestions"  Visibility="Hidden" Grid.Column="1" Margin="10,0,0,0" Grid.Row="1" >
+            <ListView Width="894" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Expander Style="{StaticResource ex}" Header="Traduce la palabra al ruso: cuántos">
+                    <TextBox x:Name="PeacticQuestions1" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Traduce la palabra al ruso: dónde">
+                    <TextBox x:Name="PeacticQuestions2" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Traduce la palabra al ruso: por qué">
+                    <TextBox x:Name="PeacticQuestions3" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Traduce la palabra al ruso: como">
+                    <TextBox x:Name="PeacticQuestions4" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Traduce la palabra al ruso: para qué">
+                    <TextBox x:Name="PeacticQuestions5" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Button x:Name="SavePeacticQuestions" Content="Listo" Click="SavePeacticQuestions_Click"></Button>
+            </ListView>
+        </ScrollViewer>
+
+        <ScrollViewer  x:Name="PeacticPrepositions"  Visibility="Hidden" Grid.Column="1" Margin="10,0,0,0" Grid.Row="1" >
+            <ListView Width="894" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Expander Style="{StaticResource ex}" Header="Traduce la preposición al español: в">
+                    <TextBox x:Name="PeacticPrepositions1" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Encuentra la preposición en la oración: я с восторгом пошла домой">
+                    <TextBox x:Name="PeacticPrepositions2" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Encuentra la preposición en la oración: за домом растут цветы">
+                    <TextBox x:Name="PeacticPrepositions3" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Encuentra la preposición en la oración: он поедет путшествовать через неделю">
+                    <TextBox x:Name="PeacticPrepositions4" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Expander Style="{StaticResource ex}" Header="Encuentra la preposición en la oración: мы бегали вокруг здания">
+                    <TextBox x:Name="PeacticPrepositions5" Style="{StaticResource textbox}"></TextBox>
+                </Expander>
+                <Button x:Name="SavePeacticPrepositions" Content="Listo" Click="SavePeacticPrepositions_Click"></Button>
             </ListView>
         </ScrollViewer>
     </Grid>

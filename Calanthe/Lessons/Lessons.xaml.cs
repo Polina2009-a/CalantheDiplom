@@ -172,8 +172,8 @@ namespace Calanthe
                             count += p.Answer;
                             break;
                         }
-                    }
-                    break;
+                    }       
+                    break;                  
                 case "Adjectives":
                     PeacticAdjectives.Visibility = Visibility.Visible;
                     var statAdjectives = db.Answers.Where(p => p.NumberLesson == 3);
@@ -221,7 +221,6 @@ namespace Calanthe
                             break;
                         }
                     }
-                    MessageBox.Show(count);
                     break;
                 case "Accusative":
                     PeacticAccusative.Visibility = Visibility.Visible;
@@ -364,6 +363,31 @@ namespace Calanthe
             }
             db.SaveChanges();
         }
+
+        void backError()
+        {
+            PeacticAlphabet.Visibility = Visibility.Hidden;
+            PeacticNouns.Visibility = Visibility.Hidden;
+            PeacticAdjectives.Visibility = Visibility.Hidden;
+            PeacticPronouns.Visibility = Visibility.Hidden;
+            PeacticVerbs1.Visibility = Visibility.Hidden;
+            PeacticVerbs2.Visibility = Visibility.Hidden;
+            PeacticAccusative.Visibility = Visibility.Hidden;
+            PeacticDative.Visibility = Visibility.Hidden;
+            PeacticGenitive.Visibility = Visibility.Hidden;
+            PeacticAblative.Visibility = Visibility.Hidden;
+            PeacticPrepositional.Visibility = Visibility.Hidden;
+            PeacticPast.Visibility = Visibility.Hidden;
+            PeacticFuture.Visibility = Visibility.Hidden;
+            PeacticParticles.Visibility = Visibility.Hidden;
+            PeacticQuestions.Visibility = Visibility.Hidden;
+            PeacticPrepositions.Visibility = Visibility.Hidden;
+            Back_b3.Visibility = Visibility.Hidden;
+            Back_b2.Visibility = Visibility.Visible;
+            PanelMenu.Visibility = Visibility.Visible;
+            Dictionary_b.Visibility = Visibility.Visible;
+            count = null;
+        }
         
         private void SavePeacticAlphabet_Click(object sender, RoutedEventArgs e)
         {
@@ -376,6 +400,7 @@ namespace Calanthe
                 {        
                     MessageBox.Show("Prueba aprobada!");
                     ChangeStatusPractic();
+                    count = null;
                 }
                 else
                 {
@@ -385,6 +410,7 @@ namespace Calanthe
                     PeacticAlphabet3.Text = string.Empty;
                     PeacticAlphabet4.Text = string.Empty;
                     PeacticAlphabet5.Text = string.Empty;
+                    backError();
                 }
             }
         }
@@ -399,6 +425,7 @@ namespace Calanthe
                 {
                     MessageBox.Show("Prueba aprobada!");
                     ChangeStatusPractic();
+                    count = null;
                 }
                 else
                 {
@@ -408,6 +435,7 @@ namespace Calanthe
                     PeacticNouns3.Text = string.Empty;
                     PeacticNouns4.Text = string.Empty;
                     PeacticNouns5.Text = string.Empty;
+                    backError();
                 }
             }
         }
@@ -422,6 +450,7 @@ namespace Calanthe
                 {
                     MessageBox.Show("Prueba aprobada!");
                     ChangeStatusPractic();
+                    count = null;
                 }
                 else
                 {
@@ -431,6 +460,7 @@ namespace Calanthe
                     PeacticAdjectives3.Text = string.Empty;
                     PeacticAdjectives4.Text = string.Empty;
                     PeacticAdjectives5.Text = string.Empty;
+                    backError();
                 }
             }
         }
@@ -445,6 +475,7 @@ namespace Calanthe
                 {
                     MessageBox.Show("Prueba aprobada!");
                     ChangeStatusPractic();
+                    count = null;
                 }
                 else
                 {
@@ -454,6 +485,7 @@ namespace Calanthe
                     PeacticPronouns3.Text = string.Empty;
                     PeacticPronouns4.Text = string.Empty;
                     PeacticPronouns5.Text = string.Empty;
+                    backError();
                 }
             }
         }
@@ -468,6 +500,7 @@ namespace Calanthe
                 {
                     MessageBox.Show("Prueba aprobada!");
                     ChangeStatusPractic();
+                    count = null;
                 }
                 else
                 {
@@ -476,6 +509,7 @@ namespace Calanthe
                     PeacticVerbs12.Text = string.Empty;
                     PeacticVerbs13.Text = string.Empty;
                     PeacticVerbs14.Text = string.Empty;
+                    backError();
                 }
             }
         }
@@ -490,6 +524,7 @@ namespace Calanthe
                 {
                     MessageBox.Show("Prueba aprobada!");
                     ChangeStatusPractic();
+                    count = null;
                 }
                 else
                 {
@@ -498,6 +533,8 @@ namespace Calanthe
                     PeacticVerbs22.Text = string.Empty;
                     PeacticVerbs23.Text = string.Empty;
                     PeacticVerbs24.Text = string.Empty;
+                    backError();
+                    
                 }
             }
         }
@@ -512,6 +549,7 @@ namespace Calanthe
                 {
                     MessageBox.Show("Prueba aprobada!");
                     ChangeStatusPractic();
+                    count = null;
                 }
                 else
                 {
@@ -521,6 +559,7 @@ namespace Calanthe
                     PeacticAccusative3.Text = string.Empty;
                     PeacticAccusative4.Text = string.Empty;
                     PeacticAccusative5.Text = string.Empty;
+                    backError();
                 }
             }
         }
@@ -535,6 +574,7 @@ namespace Calanthe
                 {
                     MessageBox.Show("Prueba aprobada!");
                     ChangeStatusPractic();
+                    count = null;
                 }
                 else
                 {
@@ -544,6 +584,7 @@ namespace Calanthe
                     PeacticDative3.Text = string.Empty;
                     PeacticDative4.Text = string.Empty;
                     PeacticDative5.Text = string.Empty;
+                    backError();
                 }
             }
         }
@@ -558,6 +599,7 @@ namespace Calanthe
                 {
                     MessageBox.Show("Prueba aprobada!");
                     ChangeStatusPractic();
+                    count = null;
                 }
                 else
                 {
@@ -567,6 +609,7 @@ namespace Calanthe
                     PeacticGenitive3.Text = string.Empty;
                     PeacticGenitive4.Text = string.Empty;
                     PeacticGenitive5.Text = string.Empty;
+                    backError();
                 }
             }
         }
@@ -581,6 +624,7 @@ namespace Calanthe
                 {
                     MessageBox.Show("Prueba aprobada!");
                     ChangeStatusPractic();
+                    count = null;
                 }
                 else
                 {
@@ -590,6 +634,7 @@ namespace Calanthe
                     PeacticAblative3.Text = string.Empty;
                     PeacticAblative4.Text = string.Empty;
                     PeacticAblative5.Text = string.Empty;
+                    backError();
                 }
             }
         }
@@ -603,6 +648,7 @@ namespace Calanthe
                 {
                     MessageBox.Show("Prueba aprobada!");
                     ChangeStatusPractic();
+                    count = null;
                 }
                 else
                 {
@@ -611,6 +657,7 @@ namespace Calanthe
                     PeacticPrepositional2.Text = string.Empty;
                     PeacticPrepositional3.Text = string.Empty;
                     PeacticPrepositional4.Text = string.Empty;
+                    backError();
                 }
             }
         }
@@ -624,6 +671,7 @@ namespace Calanthe
                 {
                     MessageBox.Show("Prueba aprobada!");
                     ChangeStatusPractic();
+                    count = null;
                 }
                 else
                 {
@@ -632,6 +680,7 @@ namespace Calanthe
                     PeacticPast2.Text = string.Empty;
                     PeacticPast3.Text = string.Empty;
                     PeacticPast4.Text = string.Empty;
+                    backError();
                 }
             }
         }
@@ -645,6 +694,7 @@ namespace Calanthe
                 {
                     MessageBox.Show("Prueba aprobada!");
                     ChangeStatusPractic();
+                    count = null;
                 }
                 else
                 {
@@ -653,6 +703,7 @@ namespace Calanthe
                     PeacticFuture2.Text = string.Empty;
                     PeacticFuture3.Text = string.Empty;
                     PeacticFuture4.Text = string.Empty;
+                    backError();
                 }
             }
         }
@@ -666,6 +717,7 @@ namespace Calanthe
                 {
                     MessageBox.Show("Prueba aprobada!");
                     ChangeStatusPractic();
+                    count = null;
                 }
                 else
                 {
@@ -675,6 +727,7 @@ namespace Calanthe
                     PeacticParticles3.Text = string.Empty;
                     PeacticParticles4.Text = string.Empty;
                     PeacticParticles5.Text = string.Empty;
+                    backError();
                 }
             }
         }
@@ -688,6 +741,7 @@ namespace Calanthe
                 {
                     MessageBox.Show("Prueba aprobada!");
                     ChangeStatusPractic();
+                    count = null;
                 }
                 else
                 {
@@ -697,6 +751,7 @@ namespace Calanthe
                     PeacticQuestions3.Text = string.Empty;
                     PeacticQuestions4.Text = string.Empty;
                     PeacticQuestions5.Text = string.Empty;
+                    backError();
                 }
             }
         }
@@ -710,6 +765,7 @@ namespace Calanthe
                 {
                     MessageBox.Show("Prueba aprobada!");
                     ChangeStatusPractic();
+                    count = null;
                 }
                 else
                 {
@@ -719,6 +775,7 @@ namespace Calanthe
                     PeacticPrepositions3.Text = string.Empty;
                     PeacticPrepositions4.Text = string.Empty;
                     PeacticPrepositions5.Text = string.Empty;
+                    backError();
                 }
             }
         }

@@ -19,9 +19,9 @@
             <RowDefinition Height="94*"/>
         </Grid.RowDefinitions>
         <Image Grid.Row="0" Grid.Column="2" Source="/Resources/Logo.ico" Margin="0,0,6,0" />
-        <Button Style="{StaticResource Base}" x:Name="Back_b" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Margin="16,28,16,27" Content="Назад" Click="Back_b_Click"></Button>
-        <Button Visibility="Hidden" Style="{StaticResource Base}" x:Name="Back_b2" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Margin="16,28,16,27" Content="Назад" Click="Back_b2_Click"></Button>
-        <Button Visibility="Hidden" Style="{StaticResource Base}" x:Name="Back_b3" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Margin="16,28,16,27" Content="Назад" Click="Back_b3_Click"></Button>
+        <Button Style="{StaticResource Base}" x:Name="Back_b" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Margin="16,28,16,27" Content="Atrás" Click="Back_b_Click"></Button>
+        <Button Visibility="Hidden" Style="{StaticResource Base}" x:Name="Back_b2" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Margin="16,28,16,27" Content="Atrás" Click="Back_b2_Click"></Button>
+        <Button Visibility="Hidden" Style="{StaticResource Base}" x:Name="Back_b3" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Margin="16,28,16,27" Content="Atrás" Click="Back_b3_Click"></Button>
 
 
         <ScrollViewer Visibility="Visible" x:Name="PanelLessons" Grid.Column="1" Grid.Row="1">
@@ -223,7 +223,7 @@
                 <Expander Style="{StaticResource ex}" Header="Ponga la palabra entre paréntesis en el genitivo: на улице всегда много (люди)">
                     <TextBox x:Name="PeacticGenitive2" Style="{StaticResource textbox}"></TextBox>
                 </Expander>
-                <Expander Style="{StaticResource ex}" Header="Ponga la palabra entre paréntesis en el genitivo: Чехов А.П. написал пьесу 'Три (сестра)'">
+                <Expander Style="{StaticResource ex}" Header="Ponga la palabra entre paréntesis en el genitivo: Чехов А.П. написал 'Три (сестра)'">
                     <TextBox x:Name="PeacticGenitive3" Style="{StaticResource textbox}"></TextBox>
                 </Expander>
                 <Expander Style="{StaticResource ex}" Header="Ponga la palabra entre paréntesis en el genitivo: Счатливого (путь) тебе!">
@@ -268,7 +268,7 @@
                 <Expander Style="{StaticResource ex}" Header="Ponga la palabra entre paréntesis en el caso preposicional: мой друг пишет на (доска)">
                     <TextBox x:Name="PeacticPrepositional3" Style="{StaticResource textbox}"></TextBox>
                 </Expander>
-                <Expander Style="{StaticResource ex}" Header="Ponga la palabra entre paréntesis en el caso preposicional: фотографии висят на (стена)">
+                <Expander Style="{StaticResource ex}" Header="Ponga la palabra entre paréntesis en el caso preposicional: фотографии на (стена)">
                     <TextBox x:Name="PeacticPrepositional4" Style="{StaticResource textbox}"></TextBox>
                 </Expander>
                 <Button x:Name="SavePeacticPrepositional" Content="Listo" Click="SavePeacticPrepositional_Click"></Button>
@@ -280,7 +280,7 @@
                 <Expander Style="{StaticResource ex}" Header="Ponga el verbo en tiempo pasado en el género femenino: я (играть) с братом">
                     <TextBox x:Name="PeacticPast1" Style="{StaticResource textbox}"></TextBox>
                 </Expander>
-                <Expander Style="{StaticResource ex}" Header="Ponga el verbo en tiempo pasado en el género masculino: я (прочитать) эту книгу один год назад">
+                <Expander Style="{StaticResource ex}" Header="Ponga el verbo en tiempo pasado en el género masculino: я (прочитать) эту книгу">
                     <TextBox x:Name="PeacticPast2" Style="{StaticResource textbox}"></TextBox>
                 </Expander>
                 <Expander Style="{StaticResource ex}" Header="Ponga el verbo en tiempo pasado: они (ходить) вместе в школу">

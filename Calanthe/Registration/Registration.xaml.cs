@@ -95,16 +95,6 @@ namespace Calanthe
             }
         }
 
-        private void Password_pb_PasswordChanged(object sender, RoutedEventArgs e)
-        {
-            Password.Text = Password_pb.Password;
-        }
-
-        private void Password_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            Password_pb.Password = Password.Text;
-        }
-
         private void eye_Click(object sender, RoutedEventArgs e)
         {
             if (Password_pb.Visibility == Visibility.Visible)
